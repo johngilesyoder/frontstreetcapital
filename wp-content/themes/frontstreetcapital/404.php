@@ -1,34 +1,55 @@
-<?php
-/**
- * The template for displaying 404 pages (not found)
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
- */
+<!doctype html>
+<html <?php language_attributes(); ?> class="no-js">
+	<head <?php do_action( 'add_head_attributes' ); ?>>
 
-get_header(); ?>
+    <!-- Title -->
+    <!-- =================================== -->
+		<title><?php wp_title(''); ?></title>
 
-<div class="wrap">
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+    <!-- Styles -->
+    <!-- =================================== -->
+    <link href="<?php echo get_template_directory_uri(); ?>/assets/icons/favicon.png" rel="shortcut icon">
+    <link href="<?php echo get_template_directory_uri(); ?>/assets/icons/touch.png" rel="apple-touch-icon-precomposed">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'twentyseventeen' ); ?></h1>
-				</header><!-- .page-header -->
-				<div class="page-content">
-					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentyseventeen' ); ?></p>
+		<!-- Meta -->
+    <!-- =================================== -->
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-					<?php get_search_form(); ?>
+    <!-- Typekit -->
+    <!-- =================================== -->
+    <script src="https://use.typekit.net/sns3qns.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-		</main><!-- #main -->
-	</div><!-- #primary -->
-</div><!-- .wrap -->
+    <!-- Wordpress Generated -->
+    <!-- =================================== -->
+		<?php wp_head(); ?>
 
-<?php get_footer();
+	</head>
+
+	<body <?php body_class(); ?>>
+    <!-- Google Analytics -->
+    <!-- =================================== -->
+    <?php get_template_part( 'includes/analyticstracking' ); ?>
+
+    <div class="container">
+			<div class="error-message">
+				<h1>404</h1>
+				<h2>Page not found</h2>
+				<p>Unfortunately, we were unable to find that page or it does not exist.<br />Please <a href="/">return</a> to the home page.</p>
+			</div>
+			<div class="site-logo-wrapper">
+				<!-- ==== Site Logo ==== -->
+				<div class="site-logo">
+					<a href="/">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/site-logo.png" alt="Cluney Photo">
+          </a>
+				</div>
+			</div>
+		</div>
+
+		<?php wp_footer(); ?>
+
+	</body>
+</html>

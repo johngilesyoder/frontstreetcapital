@@ -1,0 +1,49 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+
+// Colors
+$gray-100: #F7F7F7;
+$gray-200: #EBEBEB;
+$gray-300: #E3E3E3;
+$gray-400: #D4D4D4;
+$gray-500: #B8B8B8;
+$gray-600: #737678;
+$gray-700: #4D4D4D;
+$gray-800: #363636;
+$gray-900: #242424;
+
+$gray-light:                  $gray-100;
+$gray:                        #444444;
+$gray-dark:                   #1A1F24;
+
+$primary:                     #29755E;
+
+$body-color:                  #444;
+$headings-color:              $gray-dark;
+
+
+// Fonts
+$font-family-serif:           Sentinel, Georgia, Times, 'Times New Roman', serif;
+$font-family-sans-serif:      BentonSans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-display:         BentonSansCond, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-base:            $font-family-serif;
+
+$font-size-base:              1.125rem;
+$font-size-13:                0.7222rem;
+$font-size-14:                0.7778rem;
+$font-size-15:                0.8333rem;
+$font-size-16:                0.8889rem;
+$font-size-display:           3.1666rem;
+
+$headings-font-weight:        600;
+
+
+// Buttons
+$btn-border-radius:           0;
+$btn-border-radius-lg:        0;
+$btn-border-radius-sm:        0;
+
+$btn-font-weight:             500;

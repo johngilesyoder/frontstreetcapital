@@ -1,47 +1,37 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.2
- */
+      <footer class="site-footer" role="contentinfo">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col">
+              <div class="footer-message">
+                <img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/site-logo-white.png" alt="Front Street Capital Management, Inc.">
+                <small>Investing in the fund involves risk. Investors should carefully review the risks associated with an investment in the fund by reading the prospectus which can be found here, and understand those risks before investing.</small>
+                <!-- <p>&copy; Front Street Capital Management, Inc <?php echo date('Y'); ?>. All rights reserved.</p> -->
+              </div>
+            </div>
+            <div class="col">
+              <h4>Our Offices</h4>
+              <address>
+                218 East Front Street, Suite 205<br>
+                Missoula MT  59802
+              </address>
+            </div>
+            <div class="col">
+              <h4>Contact</h4>
+              <a class="contact-link" href="">(406) 541-0130</a><br>
+              <a class="contact-link" href="">info@frontstreetcap.com</a>
+            </div>
+            <div class="col">
+              <h4>Newsletter</h4>
+              <form class="mailchimp-form">
+                <input type="text" class="form-control" placeholder="Your email">
+                <button type="submit" class="btn btn-primary">OK</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
 
-?>
+		<?php wp_footer(); ?>
 
-		</div><!-- #content -->
-
-		<footer id="colophon" class="site-footer" role="contentinfo">
-			<div class="wrap">
-				<?php
-				get_template_part( 'template-parts/footer/footer', 'widgets' );
-
-				if ( has_nav_menu( 'social' ) ) : ?>
-					<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'twentyseventeen' ); ?>">
-						<?php
-							wp_nav_menu( array(
-								'theme_location' => 'social',
-								'menu_class'     => 'social-links-menu',
-								'depth'          => 1,
-								'link_before'    => '<span class="screen-reader-text">',
-								'link_after'     => '</span>' . twentyseventeen_get_svg( array( 'icon' => 'chain' ) ),
-							) );
-						?>
-					</nav><!-- .social-navigation -->
-				<?php endif;
-
-				get_template_part( 'template-parts/footer/site', 'info' );
-				?>
-			</div><!-- .wrap -->
-		</footer><!-- #colophon -->
-	</div><!-- .site-content-contain -->
-</div><!-- #page -->
-<?php wp_footer(); ?>
-
-</body>
+	</body>
 </html>
