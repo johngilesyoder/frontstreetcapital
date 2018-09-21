@@ -32,21 +32,4 @@
 
     <!-- Nav -->
     <!-- =================================== -->
-    <header class="site-header">
-      <div class="container-fluid">
-        <div class="flex-wrapper">
-          <a href="/" class="site-logo">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/site-logo.png" alt="Front Street Capital Management, Inc.">
-          </a>
-          <div class="site-navigation">
-            <nav class="nav-quick-access">
-              <a href="#">Contact us</a>
-              <button type="button" class="btn btn-primary">Account access</button>
-            </nav>
-            <button type="button" class="btn-menu">
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-menu.svg">
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
+    <?php get_template_part( 'includes/header-nav' ); ?>

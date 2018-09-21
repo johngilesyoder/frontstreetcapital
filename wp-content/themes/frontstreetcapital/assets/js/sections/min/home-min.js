@@ -1,1 +1,1 @@
-!function($,t,i){$(function(){"use strict"})}(jQuery,this);
+!function($,e,o){$(function(){"use strict";$(document).ready(function(){$("#hero-carousel").slick({fade:!0,dots:!0,arrows:!1,autoplay:!0,autoplaySpeed:6e3,speed:1e3,pauseOnHover:!1,pauseOnDotsHover:!0})})})}(jQuery,this);

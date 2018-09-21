@@ -1,5 +1,7 @@
 .site-header {
   padding: 30px 0;
+  position: relative;
+  z-index: 100;
   .flex-wrapper {
     display: flex;
     align-items: center;
@@ -23,7 +25,7 @@
       font-family: $font-family-sans-serif;
       color: $gray-dark;
       font-weight: 500;
-      font-size: $font-size-16;
+      font-size: $font-size-15;
       &:hover {
         color: darken($gray-dark, 15%);
       }
@@ -35,5 +37,19 @@
     padding: 0;
     margin: 0;
     cursor: pointer;
+  }
+}
+
+.site-header.inverse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  @include gradient-y($start-color: rgba(#07090A, .18), $end-color: rgba(#07090A, 0), $start-percent: 0%, $end-percent: 100%)
+  .nav-quick-access {
+    a {
+      color: $white;
+    }
   }
 }

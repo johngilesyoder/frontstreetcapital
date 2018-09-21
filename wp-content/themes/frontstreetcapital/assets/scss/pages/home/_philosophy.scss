@@ -1,0 +1,96 @@
+.home-philosophy {
+  .grid-row {
+    display: flex;
+    justify-content: space-between;
+    &:not(:last-child) {
+      margin-bottom: $grid-gutter-width;
+    }
+    .grid-column {
+      width: calc(50% - 15px);
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+    }
+    .grid-block {
+      // Large block
+      &.grid-block-lg {
+        background: $white;
+        padding: ($grid-gutter-width * 2);
+        p {
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+      // Quote
+      &.grid-block-quote {
+        background: $tertiary;
+        color: #fff;
+        padding: $grid-gutter-width;
+        display: flex;
+        align-items: flex-start;
+        i {
+          font-size: $font-size-display;
+          color: rgba($white, .3);
+          transform: scale(-1, -1);
+          line-height: 25px;
+          margin-right: ($grid-gutter-width / 2);
+        }
+        blockquote {
+          margin: 0;
+          p {
+            font-style: italic;
+            font-weight: 500;
+            line-height: 1.25;
+          }
+          .blockquote-footer {
+            font-size: $font-size-16;
+            font-weight: 700;
+            font-family: $font-family-sans-serif;
+            color: $white;
+          }
+        }
+      }
+      // Photo
+      &.grid-block-photo {
+        background-color: $gray-dark;
+        background-size: cover;
+        background-position: 50% 50%;
+        flex: 1 0 auto;
+        margin-top: $grid-gutter-width;
+      }
+      // Long term
+      &.grid-block-long-term {
+        width: calc(66.6666% - 15px);
+        background: $white;
+        display: flex;
+        justify-content: space-between;
+        .text-wrapper {
+          padding: $grid-gutter-width;
+          width: calc(66.6666% - 15px);
+        }
+        .block-photo {
+          width: calc(33.3333% - 15px);
+          background-size: cover;
+          background-position: 50% 50%;
+        }
+        p {
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+      // Eating our own cooking
+      &.grid-block-eating {
+        width: calc(33.3333% - 15px);
+        background: $white;
+        padding: $grid-gutter-width;
+        p {
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

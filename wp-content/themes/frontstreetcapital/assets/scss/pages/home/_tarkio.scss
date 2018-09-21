@@ -1,0 +1,38 @@
+.home-tarkio {
+  background: $gray-dark;
+  background-size: cover;
+  background-position: 50% 50%;
+  padding: ($grid-gutter-width * 4);
+  .flex-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .tarkio-logo {
+    width: calc(33.3333% - 15px);
+    background: $white;
+    padding: ($grid-gutter-width * 3);
+    @include elevate;
+    img {
+      max-width: 100%;
+    }
+  }
+  .tarkio-card {
+    background: $white;
+    @include elevate;
+    padding: ($grid-gutter-width * 2);
+    width: calc(66.6666% - 15px);
+    .btn {
+      font-size: $font-size-base;
+      i {
+        vertical-align: middle;
+        font-size: $font-size-base;
+        margin-left: 8px;
+      }
+    }
+    small {
+      display: block;
+      margin-top: ($grid-gutter-width * 2);
+      color: $gray-600;
+    }
+  }
+}

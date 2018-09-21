@@ -23,8 +23,12 @@
             <div class="col">
               <h4>Newsletter</h4>
               <form class="mailchimp-form">
-                <input type="text" class="form-control" placeholder="Your email">
-                <button type="submit" class="btn btn-primary">OK</button>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Your email">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">OK</button>
+                  </div>
+                </div>
               </form>
             </div>
           </div>

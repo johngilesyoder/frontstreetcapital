@@ -12,8 +12,9 @@ Tags:
 
 @import "utilities/variables";
 
-// Bootstrap
+// Vendor
 @import "../bower_components/bootstrap/scss/bootstrap";
+@import "../bower_components/slick-carousel/slick/slick.scss";
 
 // Utilities
 @import "utilities/fonts";
@@ -40,5 +41,9 @@ Tags:
 @import "pages/blog";
 @import "pages/contact";
 @import "pages/home";
+@import "pages/home/hero";
+@import "pages/home/mission";
+@import "pages/home/philosophy";
+@import "pages/home/tarkio";
 
 // Vendor
