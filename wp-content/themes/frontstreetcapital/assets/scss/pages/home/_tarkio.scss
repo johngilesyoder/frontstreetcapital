@@ -1,8 +1,9 @@
-.home-tarkio {
+.page-template-template-home .home-tarkio {
   background: $gray-dark;
   background-size: cover;
   background-position: 50% 50%;
   padding: ($grid-gutter-width * 4);
+  margin: 0;
   .flex-wrapper {
     display: flex;
     justify-content: space-between;
@@ -13,7 +14,7 @@
     padding: ($grid-gutter-width * 3);
     @include elevate;
     img {
-      max-width: 100%; 
+      max-width: 100%;
     }
   }
   .tarkio-card {

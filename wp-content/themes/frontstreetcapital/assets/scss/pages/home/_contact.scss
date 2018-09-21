@@ -1,0 +1,36 @@
+.home-contact {
+  background: $gray-700;
+  padding: ($grid-gutter-width * 2.666) 0;
+  position: relative;
+  .card-contact {
+    background: $white;
+    padding: ($grid-gutter-width * 2);
+    @include elevate;
+    position: relative;
+    z-index: 10;
+  }
+  address {
+    position: absolute;
+    right: 0;
+    top: ($grid-gutter-width * 2.666);
+    background: $gray-dark;
+    color: $white;
+    padding: ($grid-gutter-width / 2);
+    z-index: 10;
+  }
+  form {
+    .flex-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+}

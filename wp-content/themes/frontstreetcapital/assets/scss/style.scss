@@ -26,7 +26,7 @@ Tags:
 // Components
 @import "components/cms-content";
 @import "components/forms";
-@import "components/hr";
+@import "components/insight";
 
 // Layout
 @import "layout/archive";
@@ -45,5 +45,8 @@ Tags:
 @import "pages/home/mission";
 @import "pages/home/philosophy";
 @import "pages/home/tarkio";
+@import "pages/home/insights";
+@import "pages/home/who-we-are";
+@import "pages/home/contact";
 
 // Vendor

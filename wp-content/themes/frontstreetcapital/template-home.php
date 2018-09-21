@@ -14,9 +14,21 @@
     <!-- =================================== -->
     <?php get_template_part( 'includes/home/philosophy' ); ?>
 
-    <!-- Philosophy -->
+    <!-- Tarkio -->
     <!-- =================================== -->
     <?php get_template_part( 'includes/home/tarkio' ); ?>
+
+    <!-- Tarkio -->
+    <!-- =================================== -->
+    <?php get_template_part( 'includes/home/insights' ); ?>
+
+    <!-- Tarkio -->
+    <!-- =================================== -->
+    <?php get_template_part( 'includes/home/who-we-are' ); ?>
+
+    <!-- Contact -->
+    <!-- =================================== -->
+    <?php get_template_part( 'includes/home/contact' ); ?>
 
   </main>
 

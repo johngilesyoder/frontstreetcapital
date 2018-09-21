@@ -1,0 +1,86 @@
+.home-insights {
+  padding: ($grid-gutter-width * 2.666) 0;
+  background: $white;
+  .carousel-wrapper {
+    position: relative;
+  }
+  .insights-carousel {
+    .slick-list {
+      padding: 0 45px;
+    }
+    .insight {
+      padding: 0 15px;
+      width: 350px;
+    }
+  }
+  .slick-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    border: 0;
+    background-size: cover;
+    padding: 0;
+    width: 190px;
+    transition: 150ms opacity;
+    &.slick-disabled {
+      opacity: 0;
+    }
+    span {
+      display: inline-block;
+      background: $white;
+      height: 73px;
+      width: 73px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 150ms box-shadow;
+      box-shadow:
+        0 0 0 1px rgba(0,0,0,.1),
+        0 3px 6px rgba(0,0,0,.2),
+        inset 0 0 0 1px rgba(255,255,255,.55),
+        inset 0 0 0 1px rgba(0,0,0,.14);
+      &:hover {
+        box-shadow:
+          0 0 0 1px rgba(0,0,0,.1),
+          0 2px 10px rgba(0,0,0,.55),
+          inset 0 0 0 1px rgba(255,255,255,.55),
+          inset 0 0 0 1px rgba(0,0,0,.14);
+        i {
+          color: $link-hover-color;
+        }
+      }
+      i {
+        color: $link-color;
+        font-size: 60px;
+        transition: 150ms color;
+      }
+    }
+  }
+  .slick-prev {
+    left: 0;
+    background-position: 100% 50%;
+    background-image: url('assets/img/carousel-prev-bg.png');
+    span {
+      margin-right: auto;
+      margin-left: 20px;
+      i {
+        transform: translateX(-2px);
+      }
+    }
+  }
+  .slick-next {
+    right: 0;
+    background-position: 0% 50%;
+    background-image: url('assets/img/carousel-next-bg.png');
+    span {
+      margin-left: auto;
+      margin-right: 20px;
+      i {
+        transform: translateX(2px);
+      }
+    }
+  }
+}

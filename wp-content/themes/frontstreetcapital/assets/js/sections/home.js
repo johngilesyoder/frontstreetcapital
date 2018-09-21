@@ -3,7 +3,7 @@
   $(function () {
     'use strict';
 
-    // Init Slick Carousel
+    // Init Hero Carousel
     $(document).ready(function(){
       $('#hero-carousel').slick({
         fade: true,
@@ -14,6 +14,17 @@
         speed: 1000,
         pauseOnHover: false,
         pauseOnDotsHover: true
+      });
+    });
+
+    // Init Insights Carousel
+    $(document).ready(function(){
+      $('#insights-carousel').slick({
+        dots: false,
+        slidesToShow: 4,
+        infinite: false,
+        nextArrow: $('#carousel-next'),
+        prevArrow: $('#carousel-prev')
       });
     });
 
