@@ -18,6 +18,8 @@ if (function_exists('add_theme_support')) {
   add_theme_support('automatic-feed-links');
 }
 
+add_post_type_support( 'page', 'excerpt' );
+
 /*------------------------------------*\
 Functions
 \*------------------------------------*/

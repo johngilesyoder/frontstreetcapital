@@ -1,0 +1,23 @@
+.page-template-template-portfolio {
+  background: $gray-100;
+  main {
+    padding-top: 0;
+  }
+  .companies {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    .company {
+      width: calc(33.3333% - 15px);
+      background: $white;
+      padding: ($grid-gutter-width * 2.66) ($grid-gutter-width * 2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 $grid-gutter-width;
+      img {
+        max-width: 60%;
+      }
+    }
+  }
+}

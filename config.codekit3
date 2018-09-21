@@ -13101,6 +13101,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/wp-content\/themes\/frontstreetcapital\/assets\/img\/company-costco.jpg": {
+		"ft": 16384,
+		"iS": 35558,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/wp-content\/themes\/frontstreetcapital\/assets\/img\/company-costco.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/wp-content\/themes\/frontstreetcapital\/assets\/img\/grid-block-photo.jpg": {
 		"ft": 16384,
 		"iS": 175790,
@@ -13164,6 +13175,17 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/wp-content\/themes\/frontstreetcapital\/assets\/img\/masthead-insights.jpg": {
+		"ft": 16384,
+		"iS": 491747,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "\/wp-content\/themes\/frontstreetcapital\/assets\/img\/masthead-insights.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/wp-content\/themes\/frontstreetcapital\/assets\/img\/person-russ.jpg": {
 		"ft": 16384,
@@ -13981,6 +14003,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"\/wp-content\/themes\/frontstreetcapital\/assets\/scss\/components\/_page-masthead.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/wp-content\/themes\/frontstreetcapital\/assets\/_page-masthead.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"\/wp-content\/themes\/frontstreetcapital\/assets\/scss\/components\/forms.scss": {
 		"aP": 1,
 		"bl": 1,
@@ -14120,6 +14155,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/wp-content\/themes\/frontstreetcapital\/assets\/_home.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"\/wp-content\/themes\/frontstreetcapital\/assets\/scss\/pages\/_portfolio.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/wp-content\/themes\/frontstreetcapital\/assets\/_portfolio.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -14446,6 +14494,13 @@
 		"oAP": "\/wp-content\/themes\/frontstreetcapital\/includes\/mailchimp.php",
 		"oF": 0
 		},
+	"\/wp-content\/themes\/frontstreetcapital\/includes\/page-masthead.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/wp-content\/themes\/frontstreetcapital\/includes\/page-masthead.php",
+		"oF": 0
+		},
 	"\/wp-content\/themes\/frontstreetcapital\/includes\/person.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -14725,6 +14780,13 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/frontstreetcapital\/template-home.php",
+		"oF": 0
+		},
+	"\/wp-content\/themes\/frontstreetcapital\/template-portfolio.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/wp-content\/themes\/frontstreetcapital\/template-portfolio.php",
 		"oF": 0
 		},
 	"\/wp-content\/themes\/frontstreetcapital\/wp_bootstrap_navwalker.php": {
