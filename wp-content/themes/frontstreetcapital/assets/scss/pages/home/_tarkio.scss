@@ -13,8 +13,8 @@
     padding: ($grid-gutter-width * 3);
     @include elevate;
     img {
-      max-width: 100%;
-    } 
+      max-width: 100%; 
+    }
   }
   .tarkio-card {
     background: $white;
