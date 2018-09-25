@@ -24,10 +24,13 @@ Tags:
 @import "utilities/z-index";
 
 // Components
+@import "components/category-filtering";
 @import "components/cms-content";
 @import "components/forms";
 @import "components/insight";
 @import "components/page-masthead";
+@import "components/off-canvas-menu";
+@import "components/account-access";
 
 // Layout
 @import "layout/archive";
@@ -50,5 +53,7 @@ Tags:
 @import "pages/home/who-we-are";
 @import "pages/home/contact";
 @import "pages/portfolio";
+@import "pages/insights";
+@import "pages/insight";
 
 // Vendor

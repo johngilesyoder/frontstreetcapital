@@ -1,0 +1,56 @@
+.off-canvas-menu {
+  background: rgba($gray-dark, .5);
+  color: #fff;
+  transition: background 0.35s linear,height 0.35s ease-in, transform .35s, backdrop-filter .25s;
+  transform: translateX(100%);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  padding: 0 ($grid-gutter-width * 2) ($grid-gutter-width * 2);
+  backdrop-filter: blur(0);
+  .menu-header {
+    height: $header-height;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .btn-close-menu {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    color: $white;
+    line-height: 1;
+    i {
+      line-height: 1;
+      font-size: 50px;
+    }
+  }
+  nav {
+    text-align: right;
+    a {
+      font-size: $font-size-42;
+      font-family: $font-family-display;
+      color: $white;
+      opacity: .7;
+      transition: color 150ms;
+      display: block;
+      text-decoration: none;
+      line-height: 1.6666;
+      &:hover {
+        opacity: 1;
+      }
+      &.is--current {
+        opacity: 1;
+      }
+    }
+  }
+  &.is--open {
+    transform: translateX(0);
+    background: rgba($gray-dark, .93);
+    backdrop-filter: blur(10px);
+  }
+}

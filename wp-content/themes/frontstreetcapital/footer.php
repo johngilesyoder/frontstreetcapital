@@ -35,6 +35,10 @@
         </div>
       </footer>
 
+      <!-- Account Access -->
+      <!-- =================================== -->
+      <?php get_template_part( 'includes/account-access'); ?>
+
 		<?php wp_footer(); ?>
 
 	</body>

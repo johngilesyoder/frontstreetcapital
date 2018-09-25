@@ -1,11 +1,34 @@
-.insight {
+.investor_insight {
+  a {
+    text-decoration: none;
+  }
   .feature-img {
+    position: relative;
     margin: 0 0 $grid-gutter-width;
+    display: block;
     img {
       width: 100%;
-      height: 50%;
+      height: 12vw;
       object-fit: cover;
       object-position: 50% 50%;
+    }
+    .has-media {
+      color: $white;
+      width: 35px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      position: absolute;
+      right: ($grid-gutter-width / 2);
+      bottom: ($grid-gutter-width / 2);
+      &.video {
+        background: $orange;
+      }
+      &.audio {
+        background: $blue;
+      }
     }
   }
   .preheader {
@@ -17,6 +40,12 @@
     font-family: $font-family-display;
     font-weight: 700;
     margin: 0 0 15px;
+    a {
+      color: $headings-color;
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
   .insight-excerpt {
     line-height: 1.25;

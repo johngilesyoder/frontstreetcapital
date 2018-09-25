@@ -1,0 +1,13 @@
+.single-investor_insight {
+  .insight-title {
+    font-family: $font-family-display;
+    font-size: $font-size-42;
+    margin: 0;
+  }
+  .preheader {
+    margin: 0 0 ($grid-gutter-width * 1.25);
+  }
+  .insight-excerpt {
+    margin: 0 0 ($grid-gutter-width * 1.25);
+  }
+}

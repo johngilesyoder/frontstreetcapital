@@ -20,6 +20,19 @@ if (function_exists('add_theme_support')) {
 
 add_post_type_support( 'page', 'excerpt' );
 
+// Remove prefix for post type archive title ('Archives: ')
+add_filter( 'get_the_archive_title', function ($title) {
+
+  if ( is_post_type_archive('investor_insight') ) {
+    $title = post_type_archive_title( '', false );
+  } elseif ( is_taxonomy('insight_type') ) {
+    $title = single_term_title( '', false );
+  }
+
+  return $title;
+
+});
+
 /*------------------------------------*\
 Functions
 \*------------------------------------*/
@@ -265,7 +278,7 @@ function html5wp_pagination() {
 function html5wp_index($length) { // Create 20 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');
     return 20;
 }
-function html5wp_custom_post($length) { // Create 40 Word Callback for Custom Post Excerpts, call using html5wp_excerpt('html5wp_custom_post');
+function html5wp_insight_post($length) { // Create 40 Word Callback for Custom Post Excerpts, call using html5wp_excerpt('html5wp_custom_post');
     return 40;
 }
 
@@ -306,27 +319,6 @@ function html5blankgravatar($avatar_defaults) {
   $myavatar                   = get_template_directory_uri() . '/img/gravatar.jpg';
   $avatar_defaults[$myavatar] = "Custom Gravatar";
   return $avatar_defaults;
-}
-
-function finca_author_name( $display_name ) {
-  global $post;
-  // Get author's display name
-  $display_name = get_the_author_meta( 'display_name', $post->post_author );
-  echo $display_name;
-}
-
-function finca_author_link( $user_website ) {
-  global $post;
-  // Get author's website URL
-  $user_website = get_the_author_meta('url', $post->post_author);
-  echo $user_website;
-}
-
-function finca_author_title( $user_description ) {
-  global $post;
-    // Get author's biographical information or description
-    $user_description = get_the_author_meta( 'user_description', $post->post_author );
-    echo $user_description;
 }
 
 

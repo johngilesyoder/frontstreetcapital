@@ -1,0 +1,39 @@
+.account-access {
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: auto;
+  z-index: 1000;
+  padding: 0 ($grid-gutter-width * 2) ($grid-gutter-width * 2);
+  opacity: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  visibility: hidden;
+  transition: visibility 0s linear .5s, opacity .5s, backdrop-filter .15s;
+  backdrop-filter: blur(0);
+  .btn-close-account-access {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    color: $white;
+    line-height: 1;
+    i {
+      line-height: 1;
+      font-size: 50px;
+    }
+  }
+  &.is--open {
+    background: rgba($gray-dark, .93);
+    opacity: 1;
+    height: 100%;
+    visibility: visible;
+    transition-delay: 0s;
+    backdrop-filter: blur(10px);
+  }
+}

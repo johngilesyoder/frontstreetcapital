@@ -1,0 +1,1 @@
+"use strict";!function($,n,o){$(function(){function n(){u?$("body").removeClass("show-menu"):$("body").addClass("show-menu"),u=!u}var o=$(".content-wrap"),t=$("#open-button"),c=$("#close-button"),u=!1;t.click(function(){}),c&&c.click(function(){}),o.click(function(o){var t=o.target;u&&t!==openbtn&&n()})})}(jQuery,void 0);

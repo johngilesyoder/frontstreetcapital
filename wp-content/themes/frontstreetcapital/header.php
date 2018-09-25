@@ -30,6 +30,10 @@
     <?php get_template_part( 'includes/analyticstracking' ); ?>
 
 
-    <!-- Nav -->
+    <!-- Quick Access -->
     <!-- =================================== -->
     <?php get_template_part( 'includes/header-nav' ); ?>
+
+    <!-- Nav -->
+    <!-- =================================== -->
+    <?php get_template_part( 'includes/off-canvas-menu'); ?>

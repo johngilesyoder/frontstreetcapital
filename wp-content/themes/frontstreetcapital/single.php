@@ -1,94 +1,71 @@
 <?php get_header(); ?>
 
-<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+	<main role="main" aria-label="Content">
+	<!-- section -->
+	<section>
 
-<div class="container-fluid">
-	<h1 class="page-title"><?php the_title(); ?></h1>
-	<span class="date"><?php the_time('F j, Y'); ?></span>
-	<div class="post-share">
-		<div class="share-facebook">
-			<div class="fb-like" data-width="80" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
-		</div>
-		<div class="share-twitter">
-			<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-		</div>
-		<div class="share-pinterest">
-			<a href="https://www.pinterest.com/pin/create/button/">
-				<img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" />
-			</a>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-8">
-			<main role="main">
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php if ( have_posts() ) : while (have_posts() ) : the_post(); ?>
 
-					<?php the_content(); // Dynamic Content ?>
+		<!-- article -->
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-					<div class="grid">
-						<div class="gutter-sizer"></div>
-						<!-- Loop these images from ACF -->
+			<!-- post thumbnail -->
+			<?php if ( has_post_thumbnail() ) : // Check if Thumbnail exists. ?>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+					<?php the_post_thumbnail(); // Fullsize image for the single post. ?>
+				</a>
+			<?php endif; ?>
+			<!-- /post thumbnail -->
 
-						<?php if( have_rows('gallery_images') ): ?>
+			<!-- post title -->
+			<h1>
+				<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+			</h1>
+			<!-- /post title -->
 
-							<?php while( have_rows('gallery_images') ): the_row();
+			<!-- post details -->
+			<span class="date">
+				<time datetime="<?php the_time( 'Y-m-d' ); ?> <?php the_time( 'H:i' ); ?>">
+					<?php the_date(); ?> <?php the_time(); ?>
+				</time>
+			</span>
+			<span class="author"><?php esc_html_e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
+			<span class="comments"><?php if ( comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' ) ); ?></span>
+			<!-- /post details -->
 
-								// vars
-								$image = get_sub_field('gallery_image');
-								$diptych = get_sub_field('vertical');
+			<?php the_content(); // Dynamic Content. ?>
 
-								?>
+			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>' ); // Separated by commas with a line break at the end. ?>
 
-									<?php if( $link ): ?>
-										<a href="<?php echo $link; ?>">
-									<?php endif; ?>
+			<p><?php esc_html_e( 'Categorised in: ', 'html5blank' ); the_category( ', ' ); // Separated by commas. ?></p>
 
-									<img class="grid-item<?php if( $diptych ): ?> diptych<?php endif; ?>" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" title="<?php echo $image['title'] ?>" />
+			<p><?php esc_html_e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
 
-							<?php endwhile; ?>
+			<?php edit_post_link(); // Always handy to have Edit Post Links available. ?>
 
-						<?php endif; ?>
+			<?php comments_template(); ?>
 
-					</div>
+		</article>
+		<!-- /article -->
 
-					<div class="post-share post-share-bottom">
-            <strong>Share this post</strong>
-            <div class="share-facebook">
-              <div class="fb-like" data-width="80" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>
-            </div>
-            <div class="share-twitter">
-              <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-            </div>
-            <div class="share-pinterest">
-              <a href="https://www.pinterest.com/pin/create/button/">
-                <img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" />
-              </a>
-            </div>
-          </div>
+	<?php endwhile; ?>
 
-					<div class="post-tags">
-						<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>');?>
-					</div>
+	<?php else : ?>
 
-				</article>
-				<!-- /article -->
+		<!-- article -->
+		<article>
 
+			<h1><?php esc_html_e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
 
+		</article>
+		<!-- /article -->
 
-			</main>
-		</div>
-		<div class="col-md-4">
+	<?php endif; ?>
 
-			<?php get_sidebar(); ?>
+	</section>
+	<!-- /section -->
+	</main>
 
-		</div>
-	</div>
-</div>
-
-<?php endwhile; ?>
-
-<?php else: ?>
-
-<?php endif; ?>
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

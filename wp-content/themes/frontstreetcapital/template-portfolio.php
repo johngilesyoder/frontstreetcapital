@@ -1,41 +1,43 @@
 <?php /* Template Name: Portfolio */ get_header(); ?>
 
 <main role="main">
+	
 	<!-- Masthead -->
 	<!-- =================================== -->
 	<?php get_template_part( 'includes/page-masthead' ); ?>
+
 	<div class="container-fluid">
 		<div class="companies">
-			<div class="company">
+			<a href="#" class="company">
 				<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/company-costco.jpg" alt="Costco">
-			</div>
-			<div class="company">
+			</a>
+			<a href="#" class="company">
 				<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/company-costco.jpg" alt="Costco">
-			</div>
-			<div class="company">
+			</a>
+			<a href="#" class="company">
 				<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/company-costco.jpg" alt="Costco">
-			</div>
-			<div class="company">
+			</a>
+			<a href="#" class="company">
 				<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/company-costco.jpg" alt="Costco">
-			</div>
-			<div class="company">
+			</a>
+			<a href="#" class="company">
 				<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/company-costco.jpg" alt="Costco">
-			</div>
-			<div class="company">
+			</a>
+			<a href="#" class="company">
 				<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/company-costco.jpg" alt="Costco">
-			</div>
-			<div class="company">
+			</a>
+			<a href="#" class="company">
 				<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/company-costco.jpg" alt="Costco">
-			</div>
-			<div class="company">
+			</a>
+			<a href="#" class="company">
 				<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/company-costco.jpg" alt="Costco">
-			</div>
-			<div class="company">
+			</a>
+			<a href="#" class="company">
 				<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/company-costco.jpg" alt="Costco">
-			</div>
-			<div class="company">
+			</a>
+			<a href="#" class="company">
 				<img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/company-costco.jpg" alt="Costco">
-			</div>
+			</a>
 		</div>
 	</div>
 

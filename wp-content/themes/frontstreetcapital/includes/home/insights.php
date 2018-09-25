@@ -7,30 +7,38 @@
   </div>
   <div class="carousel-wrapper">
     <div id="insights-carousel" class="insights-carousel">
-      <!-- Insight -->
-      <!-- =================================== -->
-      <?php get_template_part( 'includes/insight' ); ?>
-      <!-- Insight -->
-      <!-- =================================== -->
-      <?php get_template_part( 'includes/insight' ); ?>
-      <!-- Insight -->
-      <!-- =================================== -->
-      <?php get_template_part( 'includes/insight' ); ?>
-      <!-- Insight -->
-      <!-- =================================== -->
-      <?php get_template_part( 'includes/insight' ); ?>
-      <!-- Insight -->
-      <!-- =================================== -->
-      <?php get_template_part( 'includes/insight' ); ?>
-      <!-- Insight -->
-      <!-- =================================== -->
-      <?php get_template_part( 'includes/insight' ); ?>
-      <!-- Insight -->
-      <!-- =================================== -->
-      <?php get_template_part( 'includes/insight' ); ?>
-      <!-- Insight -->
-      <!-- =================================== -->
-      <?php get_template_part( 'includes/insight' ); ?>
+      <?php
+
+			$args = array(
+				'post_type' => 'investor_insight',
+			);
+
+			// The Query
+			$the_query = new WP_Query( $args );
+
+			// The Loop
+			if ( $the_query->have_posts() ) {
+				while ( $the_query->have_posts() ) {
+					$the_query->the_post();
+
+				?>
+
+        <!-- Insight -->
+        <!-- =================================== -->
+        <?php get_template_part( 'includes/insights/insight' ); ?>
+
+				<?php
+
+				}
+			} else {
+				// no posts found
+				echo '<p>Sorry, there is not any open positions.</p>';
+			}
+			/* Restore original Post Data */
+			wp_reset_postdata();
+
+		?>
+
     </div>
     <button type="button" id="carousel-prev" class="slick-arrow slick-prev">
       <span><i class="material-icons">chevron_left</i></span>
