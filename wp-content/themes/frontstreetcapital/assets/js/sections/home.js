@@ -28,6 +28,9 @@
       });
     });
 
+    // Init video modal
+    $(".js-modal-btn").modalVideo();
+
   });
 
 })(jQuery, this);

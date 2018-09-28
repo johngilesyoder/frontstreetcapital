@@ -34,6 +34,7 @@ Tags:
 @import "components/sidebar-blog";
 @import "components/blog-loop";
 @import "components/pagination";
+@import "components/modal-video";
 
 // Layout
 @import "layout/archive";
@@ -60,3 +61,4 @@ Tags:
 @import "pages/insight";
 
 // Vendor
+@import "vendor/modal-video";

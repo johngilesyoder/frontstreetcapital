@@ -9,7 +9,7 @@
       $subtext = get_sub_field('subtext');
       $action_text = get_sub_field('primary_action_text');
       $action_link = get_sub_field('primary_action_link');
-      $video = get_sub_field('video_url');
+      $video = get_sub_field('video_id');
     ?>
 
     <div class="hero-panel" style="background-image:url('<?php echo $background['url']; ?>')">
@@ -22,7 +22,7 @@
               <div class="actions">
                 <a href="<?php echo $action_link; ?>" class="btn btn-lg btn-primary"><?php echo $action_text; ?></a>
                 <?php if( $video ): ?>
-                  <button type="button" class="btn btn-lg btn-outline-light"><i class="material-icons">play_arrow</i> Watch our video</button>
+                  <button type="button" class="btn btn-lg btn-outline-light js-modal-btn" data-video-id="<?php echo $video; ?>"><i class="material-icons">play_arrow</i> Watch our video</button>
                 <?php endif; ?>
               </div>
             </div>

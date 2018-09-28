@@ -8609,6 +8609,16 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"/assets/js/lib/jquery-modal-video.min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/assets/js/lib/min/jquery-modal-video.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"/assets/js/lib/min/codrops-menu-min.js": {
 		"ft": 64,
 		"ma": 0,
@@ -9356,6 +9366,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"/assets/scss/components/_modal-video.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/scss/components/_modal-video.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"/assets/scss/components/_off-canvas-menu.scss": {
 		"aP": 1,
 		"bl": 1,
@@ -9781,6 +9804,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/assets/scss/utilities/_z-index.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/assets/scss/vendor/_modal-video.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/scss/vendor/_modal-video.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
