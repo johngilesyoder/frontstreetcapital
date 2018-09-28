@@ -1,5 +1,7 @@
 .home-hero {
   margin-bottom: -$header-height;
+  overflow: hidden;
+  height: 820px;
   .hero-panel {
     background: $gray-dark;
     color: $white;
