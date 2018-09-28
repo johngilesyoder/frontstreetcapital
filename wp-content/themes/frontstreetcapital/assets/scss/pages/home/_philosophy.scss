@@ -16,6 +16,10 @@
       &.grid-block-lg {
         background: $white;
         padding: ($grid-gutter-width * 2);
+        .card-title-sm {
+          font-size: $font-size-base;
+          margin: $grid-gutter-width 0 ($grid-gutter-width / 2);
+        }
         p {
           &:last-child {
             margin: 0;
