@@ -8,7 +8,8 @@
   is_home() ||
   is_singular('post') ||
   is_date() ||
-  is_tag()
+  is_tag() ||
+  is_author()
 ) : ?>
   <header class="site-header inverse">
 <?php else: ?>
@@ -27,7 +28,8 @@
           is_home() ||
           is_singular('post') ||
           is_date() ||
-          is_tag()
+          is_tag() ||
+          is_author()
         ) : ?>
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/site-logo-inverted.png" alt="Front Street Capital Management, Inc.">
         <?php else: ?>
@@ -50,7 +52,8 @@
             is_home() ||
             is_singular('post') ||
             is_date() ||
-            is_tag()
+            is_tag() ||
+            is_author()
           ) : ?>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-menu-inverted.svg">
           <?php else: ?>

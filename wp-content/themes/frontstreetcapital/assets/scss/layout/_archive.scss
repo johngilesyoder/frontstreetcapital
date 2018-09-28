@@ -1,9 +1,25 @@
 .archive {
   &.tag,
   &.date,
-  &.category {
+  &.category,
+  &.author {
     main {
       padding-top: 0;
+    }
+  }
+}
+
+.archive.author {
+  .author-profile {
+    background: $gray-100;
+    padding: $grid-gutter-width;
+    margin: $grid-gutter-width 0 ($grid-gutter-width * 2);
+    h4 {
+      @extend .preheader;
+      color: $headings-color;
+    }
+    p:last-child {
+      margin: 0;
     }
   }
 }
