@@ -1,3 +1,9 @@
 .archive {
-
+  &.tag,
+  &.date,
+  &.category {
+    main {
+      padding-top: 0;
+    }
+  }
 }

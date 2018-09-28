@@ -7,40 +7,13 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/site-logo-black.png">
             Contact Us
           </h2>
-          <form>
-            <div class="row">
-              <div class="col">
-                <div class="form-group">
-                  <input type="text" class="form-control form-control" placeholder="Your Name">
-                </div>
-              </div>
-              <div class="col">
-                <div class="form-group">
-                  <input type="email" class="form-control form-control" placeholder="Email Address">
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control form-control" placeholder="Subject">
-            </div>
-            <div class="form-group">
-              <textarea class="form-control form-control" placeholder="Your Message" rows="3"></textarea>
-            </div>
-            <div class="flex-wrapper">
-              <div class="form-check">
-                <input class="form-check-input" id="newsletter" type="checkbox" checked="checked">
-                <label class="form-check-label" for="newsletter">I wish to subscribe to the Newsletter.</label>
-              </div>
-              <button type="submit" class="btn btn-lg btn-primary">Send</button>
-            </div>
-          </form>
+          <?php gravity_form( 1, false, false, false, '', true ); ?>
         </div>
       </div>
     </div>
   </div>
   <address>
-    218 East Front Street<br>
-    Suite 205
+    <?php the_field('address', 'option'); ?>
   </address>
   <iframe
     scrolling="no"

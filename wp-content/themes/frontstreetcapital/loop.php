@@ -3,33 +3,39 @@
 	<!-- article -->
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<!-- post thumbnail -->
-		<?php if ( has_post_thumbnail() ) : // Check if thumbnail exists. ?>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-				<?php the_post_thumbnail( array( 120, 120 ) ); // Declare pixel size you need inside the array. ?>
-			</a>
-		<?php endif; ?>
-		<!-- /post thumbnail -->
+		<div class="row">
+			<?php if ( has_post_thumbnail() ) : ?>
+				<div class="col-2">
+					<!-- post thumbnail -->
+						<a href="<?php the_permalink(); ?>" class="post-thumbnail" title="<?php the_title_attribute(); ?>">
+							<?php the_post_thumbnail( array( 120, 120 ) ); // Declare pixel size you need inside the array. ?>
+						</a>
+					<!-- /post thumbnail -->
+				</div>
+			<?php endif; ?>
+			<?php if ( has_post_thumbnail() ) : ?>
+				<div class="col-10">
+			<?php else : ?>
+				<div class="col-12">
+			<?php endif; ?>
+				<!-- post title -->
+				<h2>
+					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+				</h2>
+				<!-- /post title -->
 
-		<!-- post title -->
-		<h2>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-		</h2>
-		<!-- /post title -->
+				<?php html5wp_excerpt( 'html5wp_index' ); // Build your custom callback length in functions.php. ?>
 
-		<!-- post details -->
-		<span class="date">
-			<time datetime="<?php the_time( 'Y-m-d' ); ?> <?php the_time( 'H:i' ); ?>">
-				<?php the_date(); ?> <?php the_time(); ?>
-			</time>
-		</span>
-		<span class="author"><?php esc_html_e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-		<span class="comments"><?php if ( comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' ) ); ?></span>
-		<!-- /post details -->
-
-		<?php html5wp_excerpt( 'html5wp_index' ); // Build your custom callback length in functions.php. ?>
-
-		<?php edit_post_link(); ?>
+				<!-- post details -->
+				<div class="post-meta">
+					<span class="read-time">
+						<?php echo do_shortcode('[rt_reading_time label="" postfix_singular="min read" postfix="min read"]'); ?>
+					</span>
+					<span class="author"><?php esc_html_e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
+				</div>
+				<!-- /post details -->
+			</div>
+		</div>
 
 	</article>
 	<!-- /article -->

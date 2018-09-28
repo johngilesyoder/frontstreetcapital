@@ -25,7 +25,7 @@ add_filter( 'get_the_archive_title', function ($title) {
 
   if ( is_post_type_archive('investor_insight') ) {
     $title = post_type_archive_title( '', false );
-  } elseif ( is_taxonomy('insight_type') ) {
+  } elseif ( is_tax('insight_type') ) {
     $title = single_term_title( '', false );
   }
 
@@ -38,85 +38,30 @@ Functions
 \*------------------------------------*/
 
 // Register Custom Navigation Walker
-require_once 'wp_bootstrap_navwalker.php';
+require_once 'simple_navwalker.php';
 
-// Bootstrap primary navigation
-function primary_nav() {
-  wp_nav_menu(
-    array(
-      'theme_location'  => 'header-menu-mobile',
-      'menu'            => '',
-      'container'       => false,
-      'container_class' => 'menu-{menu slug}-container',
-      'container_id'    => '',
-      'menu_class'      => 'menu',
-      'menu_id'         => '',
-      'echo'            => true,
-      'fallback_cb'     => 'wp_page_menu',
-      'before'          => '',
-      'after'           => '',
-      'link_before'     => '<span>',
-      'link_after'      => '</span>',
-      'items_wrap'      => '<ul class="nav navbar-nav navbar-right">%3$s</ul>',
-      'depth'           => 2,
-      'walker'          => new wp_bootstrap_navwalker(),
-    )
-  );
-}
-
-// Bootstrap primary navigation
-function primary_nav_l() {
-  wp_nav_menu(
-    array(
-      'theme_location'  => 'header-menu-l',
-      'menu'            => '',
-      'container'       => false,
-      'container_class' => 'menu-{menu slug}-container',
-      'container_id'    => '',
-      'menu_class'      => 'menu',
-      'menu_id'         => '',
-      'echo'            => true,
-      'fallback_cb'     => 'wp_page_menu',
-      'before'          => '',
-      'after'           => '',
-      'link_before'     => '<span>',
-      'link_after'      => '</span>',
-      'items_wrap'      => '<ul class="primary-nav-left">%3$s</ul>',
-      'depth'           => 2,
-      'walker'          => new wp_bootstrap_navwalker(),
-    )
-  );
-}
-
-// Bootstrap primary navigation
-function primary_nav_r() {
-  wp_nav_menu(
-    array(
-      'theme_location'  => 'header-menu-r',
-      'menu'            => '',
-      'container'       => false,
-      'container_class' => 'menu-{menu slug}-container',
-      'container_id'    => '',
-      'menu_class'      => 'menu',
-      'menu_id'         => '',
-      'echo'            => true,
-      'fallback_cb'     => 'wp_page_menu',
-      'before'          => '',
-      'after'           => '',
-      'link_before'     => '<span>',
-      'link_after'      => '</span>',
-      'items_wrap'      => '<ul class="primary-nav-right">%3$s</ul>',
-      'depth'           => 2,
-      'walker'          => new wp_bootstrap_navwalker(),
-    )
-  );
-}
-
-function footer_menu_1() {
-  $location = 'footer-menu-1';
-  get_menu_by_location($location);
-  $menu_obj = get_menu_by_location($location);
-  wp_nav_menu(array('theme_location' => $location, 'items_wrap' => '<ul id="footer-menu-1" class="footer-menu">%3$s</ul>'));
+function primary_nav()
+{
+	wp_nav_menu(
+	array(
+		'theme_location'  => 'primary-nav',
+		'menu'            => '',
+		'container'       => '',
+		'container_class' => '',
+		'container_id'    => '',
+		'menu_class'      => '',
+		'menu_id'         => '',
+		'echo'            => true,
+		'fallback_cb'     => 'wp_page_menu',
+		'before'          => '',
+		'after'           => '',
+		'link_before'     => '',
+		'link_after'      => '',
+    'items_wrap'      => '%3$s',
+    'depth'           => 0,
+		'walker'          => new Description_Walker
+		)
+	);
 }
 
 function get_menu_by_location($location) {
@@ -185,11 +130,7 @@ function html5blank_conditional_styles() {
 // Register Navigation
 function register_html5_menu() {
   register_nav_menus(array( // Using array to specify more menus if needed
-    'header-menu-mobile'        => __('Mobile Menu', 'primary'),
-    'header-menu-l'             => __('Header Menu (L)', 'primary'),
-    'header-menu-r'             => __('Header Menu (R)', 'primary'),
-
-    'footer-menu-1'             => __('Footer Menu 1', 'secondary'),
+    'primary-nav'               => __('Main Menu', 'primary'),
   ));
 }
 
@@ -231,20 +172,9 @@ if (function_exists('register_sidebar')) {
 
   // Define Sidebar Widget Area
   register_sidebar(array(
-    'name'          => __('Sidebar (top)', 'html5blank'),
-    'description'   => __('The global sidebar', 'html5blank'),
-    'id'            => 'sidebar-top',
-    'before_widget' => '<div id="%1$s" class="%2$s">',
-    'after_widget'  => '</div>',
-    'before_title'  => '<h3>',
-    'after_title'   => '</h3>',
-  ));
-
-  // Define Sidebar Widget Area
-  register_sidebar(array(
-    'name'          => __('Sidebar (bottom)', 'html5blank'),
-    'description'   => __('The global sidebar', 'html5blank'),
-    'id'            => 'sidebar-bottom',
+    'name'          => __('Blog Sidebar', 'html5blank'),
+    'description'   => __('The blog sidebar', 'html5blank'),
+    'id'            => 'sidebar-blog',
     'before_widget' => '<div id="%1$s" class="%2$s">',
     'after_widget'  => '</div>',
     'before_title'  => '<h3>',
@@ -274,13 +204,76 @@ function html5wp_pagination() {
   ));
 }
 
+/**
+ * @param WP_Query|null $wp_query
+ * @param bool $echo
+ *
+ * @return string
+ * Accepts a WP_Query instance to build pagination (for custom wp_query()),
+ * or nothing to use the current global $wp_query (eg: taxonomy term page)
+ * - Tested on WP 4.9.5
+ * - Tested with Bootstrap 4.1
+ * - Tested on Sage 9
+ *
+ * USAGE:
+ *     <?php echo bootstrap_pagination(); ?> //uses global $wp_query
+ * or with custom WP_Query():
+ *     <?php
+ *      $query = new \WP_Query($args);
+ *       ... while(have_posts()), $query->posts stuff ...
+ *       echo bootstrap_pagination($query);
+ *     ?>
+ */
+function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true ) {
+	if ( null === $wp_query ) {
+		global $wp_query;
+	}
+	$pages = paginate_links( [
+			'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+			'format'       => '?paged=%#%',
+			'current'      => max( 1, get_query_var( 'paged' ) ),
+			'total'        => $wp_query->max_num_pages,
+			'type'         => 'array',
+			'show_all'     => false,
+			'end_size'     => 3,
+			'mid_size'     => 1,
+			'prev_next'    => true,
+			'prev_text'    => __( '<i class="material-icons">chevron_left</i> Prev' ),
+			'next_text'    => __( 'Next <i class="material-icons">chevron_right</i>' ),
+			'add_args'     => false,
+			'add_fragment' => ''
+		]
+	);
+	if ( is_array( $pages ) ) {
+		$paged = ( get_query_var( 'paged' ) == 0 ) ? 1 : get_query_var( 'paged' );
+		$pagination = '<div class="pagination"><ul class="pagination">';
+		foreach ( $pages as $page ) {
+			$pagination .= '<li class="page-item '.(strpos($page, 'current') !== false ? 'active' : '').'"> ' . str_replace( 'page-numbers', 'page-link', $page ) . '</li>';
+		}
+		$pagination .= '</ul></div>';
+		if ( $echo ) {
+			echo $pagination;
+		} else {
+			return $pagination;
+		}
+	}
+	return null;
+}
+
 // Custom Excerpts
 function html5wp_index($length) { // Create 20 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');
-    return 20;
+    return 40;
 }
 function html5wp_insight_post($length) { // Create 40 Word Callback for Custom Post Excerpts, call using html5wp_excerpt('html5wp_custom_post');
     return 40;
 }
+
+// Replaces the excerpt "Read More" text by a link
+function new_excerpt_more($more) {
+  global $post;
+	return ' ... <a class="moretag" href="'. get_permalink($post->ID) . '"> Continue reading</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 // Create the Custom Excerpts callback
 function html5wp_excerpt($length_callback='', $more_callback='') {

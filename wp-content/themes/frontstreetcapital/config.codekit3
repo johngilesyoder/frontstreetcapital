@@ -7,7 +7,7 @@
 		"uuidString": "CA253228-7492-456C-BEB8-35FA2070A6C1"
 		}
 	],
-"creatorBuild": "28815",
+"creatorBuild": "28841",
 "files": {
 	"/404.php": {
 		"cB": 0,
@@ -8031,6 +8031,61 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/assets/img/broker-charles-schwab.jpg": {
+		"ft": 16384,
+		"iS": 4249,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/broker-charles-schwab.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/assets/img/broker-etrade.jpg": {
+		"ft": 16384,
+		"iS": 9965,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/broker-etrade.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/broker-scottrade.jpg": {
+		"ft": 16384,
+		"iS": 10374,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/broker-scottrade.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/broker-td-ameritrade.jpg": {
+		"ft": 16384,
+		"iS": 10375,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/broker-td-ameritrade.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/assets/img/broker-vanguard.jpg": {
+		"ft": 16384,
+		"iS": 6752,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/broker-vanguard.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/assets/img/carousel-next-bg.png": {
 		"ft": 32768,
 		"iS": 21986,
@@ -8053,12 +8108,221 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/assets/img/company-berkshire-hathaway.jpg": {
+		"ft": 16384,
+		"iS": 28021,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/company-berkshire-hathaway.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/company-campbells.jpg": {
+		"ft": 16384,
+		"iS": 67931,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/company-campbells.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/company-century-link.jpg": {
+		"ft": 16384,
+		"iS": 35485,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/company-century-link.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/company-cerner.jpg": {
+		"ft": 16384,
+		"iS": 39241,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/company-cerner.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/company-cognex.jpg": {
+		"ft": 16384,
+		"iS": 27023,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/company-cognex.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/company-colfax.jpg": {
+		"ft": 16384,
+		"iS": 28096,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/company-colfax.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/company-corning.jpg": {
+		"ft": 16384,
+		"iS": 46374,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/company-corning.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"/assets/img/company-costco.jpg": {
 		"ft": 16384,
-		"iS": 35558,
+		"iS": 57355,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/assets/img/company-costco.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/company-expeditors.jpg": {
+		"ft": 16384,
+		"iS": 37017,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/company-expeditors.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/company-finisar.jpg": {
+		"ft": 16384,
+		"iS": 30307,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/company-finisar.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/company-gentex.jpg": {
+		"ft": 16384,
+		"iS": 43402,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/company-gentex.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/company-herman-miller.jpg": {
+		"ft": 16384,
+		"iS": 37854,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/company-herman-miller.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/company-interface.jpg": {
+		"ft": 16384,
+		"iS": 35261,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/company-interface.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/company-national-instruments.jpg": {
+		"ft": 16384,
+		"iS": 46440,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/company-national-instruments.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/company-nucor.jpg": {
+		"ft": 16384,
+		"iS": 53330,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/company-nucor.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/company-rogers-corporation.jpg": {
+		"ft": 16384,
+		"iS": 40441,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/company-rogers-corporation.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/company-sei.jpg": {
+		"ft": 16384,
+		"iS": 31790,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/company-sei.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/company-st-joe.jpg": {
+		"ft": 16384,
+		"iS": 38209,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/company-st-joe.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/company-the-container-store.jpg": {
+		"ft": 16384,
+		"iS": 43381,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/company-the-container-store.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/company-tsys.jpg": {
+		"ft": 16384,
+		"iS": 33179,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/company-tsys.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -8139,6 +8403,17 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"/assets/img/masthead-blog.jpg": {
+		"ft": 16384,
+		"iS": 899796,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/masthead-blog.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
 	"/assets/img/masthead-insights.jpg": {
 		"ft": 16384,
 		"iS": 491747,
@@ -8148,6 +8423,72 @@
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/masthead-portfolio.jpg": {
+		"ft": 16384,
+		"iS": 902578,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/masthead-portfolio.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/assets/img/person-dominic.jpg": {
+		"ft": 16384,
+		"iS": 50964,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/person-dominic.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/person-ginger.jpg": {
+		"ft": 16384,
+		"iS": 60114,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/person-ginger.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/assets/img/person-jeremy.jpg": {
+		"ft": 16384,
+		"iS": 57276,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/person-jeremy.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/person-jeremy.png": {
+		"ft": 32768,
+		"iS": 270959,
+		"oA": 0,
+		"oAP": "/assets/img/person-jeremy.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/img/person-michele.jpg": {
+		"ft": 16384,
+		"iS": 60975,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/person-michele.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/assets/img/person-russ.jpg": {
@@ -8224,7 +8565,7 @@
 		"oAP": "/assets/img/tarkio-section-bg.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"/assets/img/vintage-front-street.jpg": {
@@ -8963,6 +9304,19 @@
 		"oS": 3,
 		"uL": 1
 		},
+	"/assets/scss/components/_blog-loop.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/scss/components/_blog-loop.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
 	"/assets/scss/components/_category-filtering.scss": {
 		"aP": 1,
 		"bl": 1,
@@ -9024,6 +9378,32 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "/assets/scss/components/_page-masthead.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/assets/scss/components/_pagination.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/scss/components/_pagination.css",
+		"oF": 0,
+		"oS": 3,
+		"uL": 1
+		},
+	"/assets/scss/components/_sidebar-blog.scss": {
+		"aP": 1,
+		"bl": 1,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "/assets/scss/components/_sidebar-blog.css",
 		"oF": 0,
 		"oS": 3,
 		"uL": 1
@@ -9810,6 +10190,13 @@
 		"oAP": "/sidebar.php",
 		"oF": 0
 		},
+	"/simple_navwalker.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "/simple_navwalker.php",
+		"oF": 0
+		},
 	"/single-investor_insight.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -9862,18 +10249,18 @@
 		"oAP": "/template-home.php",
 		"oF": 0
 		},
+	"/template-masthead.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "/template-masthead.php",
+		"oF": 0
+		},
 	"/template-portfolio.php": {
 		"cB": 0,
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "/template-portfolio.php",
-		"oF": 0
-		},
-	"/wp_bootstrap_navwalker.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/wp_bootstrap_navwalker.php",
 		"oF": 0
 		}
 	},

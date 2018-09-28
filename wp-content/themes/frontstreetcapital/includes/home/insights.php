@@ -11,6 +11,7 @@
 
 			$args = array(
 				'post_type' => 'investor_insight',
+        'posts_per_page' => 12
 			);
 
 			// The Query
@@ -52,8 +53,8 @@
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-8">
-            <p>At Front Street Capital, we are passionate about both learning & teaching. To learn more about how we invest and see examples of these principles, check out the <a href="#">Investor Insights</a> page. Or <a href="#">reach out</a> to us for a coffee and a conversation.</p>
-            <a href="#" class="btn btn-lg btn-primary">Explore Investor Insights</a>
+            <?php the_field('investor_insights_follow_up'); ?>
+            <a href="/investor-insights/" class="btn btn-lg btn-primary">Explore Investor Insights</a>
           </div>
         </div>
       </div>

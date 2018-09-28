@@ -1,30 +1,14 @@
 <section class="home-mission section">
   <div class="container-fluid">
     <div class="mission-card">
-      <span class="preheader">Our Approach</span>
-      <h3 class="card-title">Buying exceptional companies at fair prices</h3>
+      <span class="preheader"><?php the_field('mission_statement_preheader'); ?></span>
+      <h3 class="card-title"><?php the_field('mission_statement_headline'); ?></h3>
       <div class="row">
         <div class="col">
-          <p>We employ a unique qualitative method of evaluating companies:</p>
-          <div class="row">
-            <div class="col">
-              <ul>
-                <li>Integrity of Management</li>
-                <li>Employee Empowerment</li>
-                <li>Teamwork</li>
-              </ul>
-            </div>
-            <div class="col">
-              <ul>
-                <li>Integrity of Management</li>
-                <li>Employee Empowerment</li>
-                <li>Teamwork</li>
-              </ul>
-            </div>
-          </div>
+          <?php the_field('mission_statement_left_content'); ?>
         </div>
         <div class="col">
-          <p>For over 25 years, our team has focused on businesses that demonstrate these core values, as we believe that buying enriching companies at fair prices can generate significant long term returns.</p>
+          <?php the_field('mission_statement_right_content'); ?>
         </div>
       </div>
     </div>

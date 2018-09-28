@@ -39,3 +39,31 @@
     }
   }
 }
+
+
+// slim
+.archive.category,
+.archive.date,
+.archive.tag,
+.single-post {
+  .page-masthead {
+    padding: $header-height 0 $grid-gutter-width;
+    .masthead-content {
+      margin-top: $grid-gutter-width;
+      .page-title {
+        font-size: $font-size-30;
+        display: inline-block;
+        a {
+          color: $white;
+          i {
+            margin-right: 10px;
+          }
+        }
+      }
+      .subtext {
+        display: inline-block;
+        margin-left: ($grid-gutter-width / 2);
+      }
+    }
+  }
+}

@@ -1,26 +1,26 @@
 <?php get_header(); ?>
 
-<?php
-  $img = wp_get_attachment_image_src(get_post_thumbnail_id(get_option('page_for_posts')),'full');
-  $featured_image = $img[0];
-?>
+<main role="main" aria-label="Content">
 
-<main role="main" class="page-journal">
-	<div class="container">
-		<div class="tile-posts">
-			<div class="row">
-				<div class="col-md-9">
-					<h1 class="page-title search-title"><?php echo sprintf( __( '%s Search Result(s) for ', 'html5blank' ), $wp_query->found_posts ); echo get_search_query(); ?></h1>
-					<?php get_template_part('loop'); ?>
+	<div class="container-fluid">
+		<div class="row justify-content-between">
+			<div class="col-8">
 
-					<?php get_template_part('pagination'); ?>
+				<h1 class="page-title"><?php echo sprintf( __( '%s Search Results for ', 'html5blank' ), $wp_query->found_posts ); ?>'<?php echo get_search_query(); ?>'</h1>
+
+				<div class="article-loop">
+					<?php get_template_part( 'loop' ); ?>
 				</div>
-				<div class="col-md-3">
-					<?php get_sidebar(); ?>
-				</div>
+
+				<?php bootstrap_pagination(); ?>
+
+			</div>
+			<div class="col-3">
+				<?php get_sidebar(); ?>
 			</div>
 		</div>
 	</div>
+
 </main>
 
 <?php get_footer(); ?>

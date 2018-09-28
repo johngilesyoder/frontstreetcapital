@@ -23,17 +23,23 @@
 
   </head>
 
-  <body <?php body_class(); ?>>
+  <?php if (is_home()) : ?>
+    <body class="page-blog">
+  <?php else: ?>
+    <body <?php body_class(); ?>>
+  <?php endif; ?>
 
     <!-- Google Analytics -->
     <!-- =================================== -->
     <?php get_template_part( 'includes/analyticstracking' ); ?>
 
 
-    <!-- Quick Access -->
-    <!-- =================================== -->
-    <?php get_template_part( 'includes/header-nav' ); ?>
+    <?php if ( !is_404() ) : ?>
+      <!-- Quick Access -->
+      <!-- =================================== -->
+      <?php get_template_part( 'includes/header-nav' ); ?>
 
-    <!-- Nav -->
-    <!-- =================================== -->
-    <?php get_template_part( 'includes/off-canvas-menu'); ?>
+      <!-- Nav -->
+      <!-- =================================== -->
+      <?php get_template_part( 'includes/off-canvas-menu'); ?>
+    <?php endif; ?>

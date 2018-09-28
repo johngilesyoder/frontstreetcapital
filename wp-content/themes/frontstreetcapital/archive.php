@@ -1,19 +1,29 @@
 <?php get_header(); ?>
 
-	<main role="main" aria-label="Content">
-		<!-- section -->
-		<section>
+<main role="main" aria-label="Content">
+	<!-- Masthead -->
+	<!-- =================================== -->
+	<?php get_template_part( 'includes/page-masthead' ); ?>
 
-			<h1><?php esc_html_e( 'Archives', 'html5blank' ); ?></h1>
+	<div class="container-fluid">
+		<div class="row justify-content-between">
+			<div class="col-8">
 
-			<?php get_template_part( 'loop' ); ?>
+				<h1><?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?></h1>
 
-			<?php get_template_part( 'pagination' ); ?>
+				<div class="article-loop">
+					<?php get_template_part( 'loop' ); ?>
+				</div>
 
-		</section>
-		<!-- /section -->
-	</main>
+				<?php bootstrap_pagination(); ?>
 
-<?php get_sidebar(); ?>
+			</div>
+			<div class="col-3">
+				<?php get_sidebar(); ?>
+			</div>
+		</div>
+	</div>
+
+</main>
 
 <?php get_footer(); ?>

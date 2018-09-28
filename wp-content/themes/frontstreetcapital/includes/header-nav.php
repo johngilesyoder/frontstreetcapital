@@ -1,9 +1,14 @@
 <?php if (
   is_front_page() ||
   is_page_template( 'template-portfolio.php' ) ||
+  is_page_template( 'template-masthead.php' ) ||
   is_post_type_archive('investor_insight') ||
   (is_tax() && is_taxonomy('insight_type')) ||
-  is_singular('investor_insight')
+  is_singular('investor_insight') ||
+  is_home() ||
+  is_singular('post') ||
+  is_date() ||
+  is_tag()
 ) : ?>
   <header class="site-header inverse">
 <?php else: ?>
@@ -15,9 +20,14 @@
         <?php if (
           is_front_page() ||
           is_page_template( 'template-portfolio.php' ) ||
+          is_page_template( 'template-masthead.php' ) ||
           is_post_type_archive('investor_insight') ||
           (is_tax() && is_taxonomy('insight_type')) ||
-          is_singular('investor_insight')
+          is_singular('investor_insight') ||
+          is_home() ||
+          is_singular('post') ||
+          is_date() ||
+          is_tag()
         ) : ?>
           <img src="<?php echo get_template_directory_uri(); ?>/assets/img/site-logo-inverted.png" alt="Front Street Capital Management, Inc.">
         <?php else: ?>
@@ -26,16 +36,21 @@
       </a>
       <div class="site-navigation">
         <nav class="nav-quick-access">
-          <a href="#">Contact us</a>
+          <a href="/contact-us/">Contact us</a>
           <button type="button" class="btn btn-primary" data-type="open-account-access">Account access</button>
         </nav>
         <button type="button" class="btn-menu" data-type="open-header-menu">
           <?php if (
             is_front_page() ||
             is_page_template( 'template-portfolio.php' ) ||
+            is_page_template( 'template-masthead.php' ) ||
             is_post_type_archive('investor_insight') ||
             (is_tax() && is_taxonomy('insight_type')) ||
-            is_singular('investor_insight')
+            is_singular('investor_insight') ||
+            is_home() ||
+            is_singular('post') ||
+            is_date() ||
+            is_tag()
           ) : ?>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/icon-menu-inverted.svg">
           <?php else: ?>

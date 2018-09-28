@@ -1,24 +1,19 @@
 <?php get_header(); ?>
 
-  <div class="container-fluid">
-    <h1 class="page-title"><a href="/blog/">Blog <small>Love &amp; Light</small></a></h1>
-    <div class="row">
-      <div class="col-md-8">
-        <h2 class="archive-title">Posts in: <span><?php single_cat_title(); ?></span></h2>
-        <main role="main">
+	<main role="main" aria-label="Content">
+		<!-- section -->
+		<section>
 
-    			<?php get_template_part('loop'); ?>
+			<h1><?php esc_html_e( 'Category: ', 'html5blank' ); single_cat_title(); ?></h1>
 
-    			<?php get_template_part('pagination'); ?>
+			<?php get_template_part( 'loop' ); ?>
 
-      	</main>
-      </div>
-      <div class="col-md-4">
+			<?php get_template_part( 'pagination' ); ?>
 
-        <?php get_sidebar(); ?>
+		</section>
+		<!-- /section -->
+	</main>
 
-      </div>
-    </div>
-  </div>
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

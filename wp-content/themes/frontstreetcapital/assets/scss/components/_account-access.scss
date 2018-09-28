@@ -10,11 +10,24 @@
   padding: 0 ($grid-gutter-width * 2) ($grid-gutter-width * 2);
   opacity: 0;
   overflow: hidden;
+  background: rgba($gray-dark, .93);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   visibility: hidden;
   transition: visibility 0s linear .5s, opacity .5s, backdrop-filter .15s;
   backdrop-filter: blur(0);
+  a {
+    color: $primary-inverted;
+    &:hover {
+      color: darken($primary-inverted, 15%);
+    }
+  }
+  .close-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: $header-height;
+  }
   .btn-close-account-access {
     background: transparent;
     border: 0;
@@ -28,8 +41,42 @@
       font-size: 50px;
     }
   }
+  .brokers {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: $grid-gutter-width;
+    .broker {
+      background: rgba(#999, .7);
+      display: flex;
+      align-items: center;
+      flex-flow: column;
+      margin: 0 0 ($grid-gutter-width / 2);
+      width: calc(50% - 7.5px);
+      padding: ($grid-gutter-width / 2);
+      transition: background 150ms;
+      &:hover {
+        background: rgba(#999, .4);
+      }
+      .broker-name {
+        font-family: $font-family-sans-serif;
+        font-size: $font-size-16;
+        color: $white;
+        display: block;
+        i {
+          line-height: 1;
+          font-size: $font-size-16;
+          vertical-align: middle;
+          margin-left: 5px;
+        }
+      }
+      .broker-logo {
+        height: 80px;
+        margin: ($grid-gutter-width / 2) 0 $grid-gutter-width;
+      }
+    }
+  }
   &.is--open {
-    background: rgba($gray-dark, .93);
     opacity: 1;
     height: 100%;
     visibility: visible;

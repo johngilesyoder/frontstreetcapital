@@ -1,23 +1,27 @@
 <?php get_header(); ?>
 
-  <div class="container-fluid">
-    <h1 class="page-title"><a href="/blog/">Blog <small>Love &amp; Light</small></a></h1>
-    <div class="row">
-      <div class="col-md-8">
-        <main role="main">
+<main role="main" aria-label="Content">
+	<!-- Masthead -->
+	<!-- =================================== -->
+	<?php get_template_part( 'includes/page-masthead' ); ?>
 
-    			<?php get_template_part('loop'); ?>
+	<div class="container-fluid">
+		<div class="row justify-content-between">
+			<div class="col-8">
 
-    			<?php get_template_part('pagination'); ?>
+				<div class="article-loop">
+					<?php get_template_part( 'loop' ); ?>
+				</div>
 
-      	</main>
-      </div>
-      <div class="col-md-4">
+				<?php bootstrap_pagination(); ?>
 
-        <?php get_sidebar(); ?>
+			</div>
+			<div class="col-3">
+				<?php get_sidebar(); ?>
+			</div>
+		</div>
+	</div>
 
-      </div>
-    </div>
-  </div>
+</main>
 
 <?php get_footer(); ?>
