@@ -7,7 +7,7 @@
 		"uuidString": "CA253228-7492-456C-BEB8-35FA2070A6C1"
 		}
 	],
-"creatorBuild": "28841",
+"creatorBuild": "28901",
 "files": {
 	"/404.php": {
 		"cB": 0,
@@ -8585,16 +8585,6 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/assets/js/lib/min/animation.gsap-min.js",
-		"oF": 1,
-		"sC": 1,
-		"tS": 0
-		},
-	"/assets/js/lib/bootstrap.min.js": {
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/assets/js/lib/min/bootstrap.min-min.js",
 		"oF": 1,
 		"sC": 1,
 		"tS": 0
