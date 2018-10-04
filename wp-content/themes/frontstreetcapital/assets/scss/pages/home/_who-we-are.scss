@@ -11,7 +11,7 @@
     &:not(:last-child) {
       margin: 0 0 $grid-gutter-width;
     }
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(lg) {
       width: 100%;
     }
     .person-photo {

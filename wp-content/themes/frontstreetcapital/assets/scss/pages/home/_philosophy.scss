@@ -7,6 +7,7 @@
       margin-bottom: $grid-gutter-width;
     }
     @include media-breakpoint-down(sm) {
+      margin: 0;
       &:not(:last-child) {
         margin-bottom: 0;
       }
@@ -16,19 +17,19 @@
       display: flex;
       flex-flow: column;
       justify-content: space-between;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         width: 100%;
       }
     }
     .grid-block {
-      @include media-breakpoint-down(sm) {
-        margin: 0 0 ($grid-gutter-width / 2);
+      @include media-breakpoint-down(md) {
+        margin: 0 0 $grid-gutter-width;
       }
       // Large block
       &.grid-block-lg {
         background: $white;
         padding: ($grid-gutter-width * 2);
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
           padding: $grid-gutter-width;
         }
         @include media-breakpoint-down(xs) {
@@ -51,9 +52,13 @@
         padding: $grid-gutter-width;
         display: flex;
         align-items: flex-start;
+        @include media-breakpoint-down(md) {
+          margin: 0;
+        }
         @include media-breakpoint-down(sm) {
           padding: ($grid-gutter-width / 2);
           flex-flow: column;
+          margin: 0 0 $grid-gutter-width;
         }
         @include media-breakpoint-down(xs) {
           display: none;
@@ -94,7 +99,7 @@
         background-position: 50% 50%;
         flex: 1 0 auto;
         margin-top: $grid-gutter-width;
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
           display: none;
         }
       }
@@ -105,7 +110,7 @@
         display: flex;
         justify-content: space-between;
         flex-flow: row wrap;
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
           width: 100%;
         }
         .text-wrapper {
@@ -136,11 +141,13 @@
         width: calc(33.3333% - 15px);
         background: $white;
         padding: $grid-gutter-width;
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
           width: 100%;
+          margin: 0;
         }
         @include media-breakpoint-down(xs) {
           padding: $grid-gutter-width ($grid-gutter-width / 2);
+          margin: 0 0 $grid-gutter-width;
         }
         p {
           &:last-child {

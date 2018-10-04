@@ -32,6 +32,13 @@
               slidesToShow: 1.25,
               slidesToScroll: 1,
             }
+          },
+          {
+            breakpoint: 992, // mobile breakpoint
+            settings: {
+              slidesToShow: 2.25,
+              slidesToScroll: 1,
+            }
           }
         ]
       });

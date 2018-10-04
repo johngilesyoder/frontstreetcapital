@@ -2,8 +2,11 @@
   background: $gray-dark;
   background-size: cover;
   background-position: 50% 50%;
-  padding: ($grid-gutter-width * 4);
+  padding: ($grid-gutter-width * 4) 0;
   margin: 0;
+  @include media-breakpoint-down(lg) {
+    padding: ($grid-gutter-width * 2) 0;
+  }
   @include media-breakpoint-down(sm) {
     padding: $grid-gutter-width 15px;
   }
@@ -23,16 +26,27 @@
     background: $white;
     padding: ($grid-gutter-width * 3);
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @include elevate;
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(lg) {
       padding: $grid-gutter-width $grid-gutter-width 15px;
       width: 100%;
     }
+    @include media-breakpoint-down(sm) {
+      padding: $grid-gutter-width;
+      width: 40%;
+      margin: 0 auto $grid-gutter-width;;
+    }
     @include media-breakpoint-down(xs) {
-      padding: $grid-gutter-width 15px;
+      width: 50%;
     }
     img {
-      max-width: 100%;
+      max-width: 75%;
+      @include media-breakpoint-down(lg) {
+        max-width: 250px;
+      }
       @include media-breakpoint-down(sm) {
         max-width: 75%;
       }
@@ -46,12 +60,24 @@
     @include elevate;
     padding: ($grid-gutter-width * 2);
     width: calc(66.6666% - 15px);
-    @include media-breakpoint-down(sm) {
+    @include media-breakpoint-down(lg) {
       padding: $grid-gutter-width;
       width: 100%;
     }
-    @include media-breakpoint-down(xs) {
-      padding: 15px;
+    @include media-breakpoint-down(sm) {
+      background: transparent;
+      color: $white;
+      padding: 0;
+    }
+    .preheader {
+      @include media-breakpoint-down(sm) {
+        color: lighten($secondary, 20%);
+      }
+    }
+    .card-title {
+      @include media-breakpoint-down(sm) {
+        color: $white;
+      }
     }
     .btn {
       font-size: $font-size-base;
@@ -68,8 +94,9 @@
       display: block;
       margin-top: ($grid-gutter-width * 2);
       color: $gray-600;
-      @include media-breakpoint-down(sm) {
+      @include media-breakpoint-down(md) {
         margin-top: $grid-gutter-width;
+        color: $white;
       }
     }
   }

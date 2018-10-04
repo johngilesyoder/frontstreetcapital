@@ -14,6 +14,9 @@
       height: 12vw;
       object-fit: cover;
       object-position: 50% 50%;
+      @include media-breakpoint-down(md) {
+        height: 25vw;
+      }
       @include media-breakpoint-down(sm) {
         height: 50vw;
       }
