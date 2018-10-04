@@ -1,13 +1,75 @@
 .single-investor_insight {
-  .insight-title {
-    font-family: $font-family-display;
-    font-size: $font-size-42;
+  .page-masthead {
+    .masthead-content {
+      .subtext {
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+    }
+  }
+  .page-title {
     margin: 0;
+    font-size: $font-size-42;
+    @include media-breakpoint-down(md) {
+      font-size: $font-size-display-md;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: $font-size-display-sm;
+    }
+    @include media-breakpoint-down(xs) {
+      font-size: $font-size-display-xs;
+    }
   }
   .preheader {
     margin: 0 0 ($grid-gutter-width * 1.25);
   }
   .insight-excerpt {
     margin: 0 0 ($grid-gutter-width * 1.25);
+  }
+  .embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    iframe,
+    object,
+    embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .amazon-product {
+    display: inline-block;
+    border-radius: 10px;
+    background: $gray-100;
+    border: 1px solid $border-color;
+    padding: 15px;
+    img:not(.amazon-logo) {
+      max-width: 100%;
+    }
+    .view-on-amazon {
+      font-family: $font-family-sans-serif;
+      color: $headings-color;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      margin: 0 0 15px;
+      font-weight: 500;
+      .amazon-logo {
+        height: 18px;
+        margin-left: 8px;
+        width: auto;
+      }
+      i {
+        margin-left: 8px;
+        font-size: 18px;
+        align-self: center;
+      }
+    }
   }
 }

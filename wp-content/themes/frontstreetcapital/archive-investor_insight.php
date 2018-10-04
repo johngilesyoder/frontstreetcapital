@@ -9,13 +9,13 @@
     <?php get_template_part( 'includes/insights/filtering'); ?>
 
     <div class="container-fluid">
-      <div class="row">
-		    <?php get_template_part('loop-investor_insight'); ?>
+		   <div class="article-loop">
+         <div class="row">
+          <?php get_template_part('loop-investor_insight'); ?>
+        </div>
+        <?php bootstrap_pagination(); ?>
       </div>
     </div>
-
-		<?php get_template_part('pagination'); ?>
-
 	</main>
 
 <?php get_footer(); ?>

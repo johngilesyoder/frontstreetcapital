@@ -9,32 +9,40 @@
 	<!-- =================================== -->
 	<?php get_template_part( 'includes/page-masthead' ); ?>
 
-	<?php get_template_part( 'includes/insights/filtering'); ?>
-
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-md-8">
+			<div class="col-md-10 col-lg-8">
 
 				<?php if ( have_posts() ) : while (have_posts() ) : the_post(); ?>
 
 					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-						<h1 class="insight-title">
-							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
-						</h1>
+						<h1 class="page-title"><?php the_title(); ?></h1>
 						<span class="preheader"><?php foreach ( $terms as $term ) { echo $term->name; } ?></span>
 
 						<div class="insight-excerpt">
 							<?php the_excerpt(); ?>
 						</div>
 
-						<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/309293326&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
-
 						<!-- post thumbnail -->
-						<?php if ( has_post_thumbnail() ) : // Check if Thumbnail exists. ?>
-							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-								<?php the_post_thumbnail(); // Fullsize image for the single post. ?>
+						<?php if ( get_field('amazon_link') ) : ?>
+							<a class="amazon-product" target="_blank" href="<?php the_field('amazon_link'); ?>">
+								<span class="view-on-amazon">
+									View on <img class="amazon-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/amazon-logo.svg" alt="Amazon.com">
+									<i class="material-icons">launch</i>
+								</span>
+								<?php the_post_thumbnail(); ?>
 							</a>
+						<?php endif; ?>
+
+						<?php if ( get_field('insight_video') ) : ?>
+							<div class="embed-container">
+								<?php the_field('insight_video'); ?>
+							</div>
+						<?php endif; ?>
+
+						<?php if ( the_field('insight_audio') ) : ?>
+							<?php the_field('insight_audio'); ?>
 						<?php endif; ?>
 
 					</article>

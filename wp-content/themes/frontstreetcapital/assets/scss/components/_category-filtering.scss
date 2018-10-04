@@ -1,6 +1,9 @@
 .category-filtering {
   border-bottom: 1px solid $border-color;
   margin: -($grid-gutter-width * 2) 0 ($grid-gutter-width * 2);
+  @include media-breakpoint-down(sm) {
+    margin: -$grid-gutter-width 0 $grid-gutter-width;
+  }
   .back-link {
     border-bottom: 4px solid transparent;
     font-family: $font-family-sans-serif;
@@ -21,17 +24,29 @@
     margin: 0;
     padding: 0;
     display: flex;
+    overflow-x: auto;
+    @include media-breakpoint-down(sm) {
+      display: block;
+      white-space: nowrap;
+      margin: 0 -15px;
+      padding: 0 15px;
+      -webkit-overflow-scrolling: touch;
+    }
     .cat-item {
+      display: inline-block;
       a {
         color: $gray-dark;
         border-bottom: 4px solid transparent;
         font-family: $font-family-sans-serif;
-        font-size: $font-size-16;
+        font-size: $font-size-14;
         font-weight: 500;
-        padding: 4px 20px 0;
+        padding: 4px 10px 0;
         line-height: 46px;
         display: block;
         text-decoration: none;
+        @include media-breakpoint-down(sm) {
+          line-height: 36px;
+        }
         &:hover {
           background: $gray-100;
         }

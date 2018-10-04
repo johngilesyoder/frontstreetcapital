@@ -6,8 +6,11 @@
     <!-- /post thumbnail -->
     <a href="<?php the_permalink(); ?>" class="feature-img" title="<?php the_title_attribute(); ?>">
       <?php the_post_thumbnail( 'full' ); ?>
-      <!-- <span class="has-media video"><icon class="material-icons">play_arrow</i></span> -->
-      <span class="has-media audio"><icon class="material-icons">volume_up</i></span>
+      <?php if( get_field('insight_video') ) : ?>
+        <span class="has-media video"><icon class="material-icons">play_arrow</i></span>
+      <?php elseif( get_field('insight_audio') ) : ?>
+        <span class="has-media audio"><icon class="material-icons">volume_up</i></span>
+      <?php endif; ?>
     </a>
   <?php else : ?>
     <!-- /post thumbnail -->

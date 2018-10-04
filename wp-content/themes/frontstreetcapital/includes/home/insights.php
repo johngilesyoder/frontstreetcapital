@@ -19,22 +19,16 @@
 
 			// The Loop
 			if ( $the_query->have_posts() ) {
-				while ( $the_query->have_posts() ) {
-					$the_query->the_post();
-
-				?>
-
-        <!-- Insight -->
-        <!-- =================================== -->
-        <?php get_template_part( 'includes/insights/insight' ); ?>
-
-				<?php
-
-				}
+        while ( $the_query->have_posts() ) {
+          $the_query->the_post();
+          // Insight -->
+          get_template_part( 'includes/insights/insight' );
+			  }
 			} else {
 				// no posts found
 				echo '<p>Sorry, there is not any open positions.</p>';
 			}
+
 			/* Restore original Post Data */
 			wp_reset_postdata();
 

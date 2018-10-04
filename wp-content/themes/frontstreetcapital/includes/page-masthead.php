@@ -28,9 +28,15 @@ $blog_masthead = get_field('blog_header_background', 'option');
             <?php the_archive_description( '<div class="subtext"', '</div>' ); ?>
 
           <!-- Insight -->
-          <?php elseif ( (is_tax() && is_taxonomy('insight_type')) || is_singular('investor_insight') ) : ?>
+          <?php elseif ( (is_tax() && is_taxonomy('insight_type')) ) : ?>
             <?php $parent_type = get_post_type_object( 'investor_insight' ); ?>
             <h1 class="page-title"><?php echo $parent_type->labels->name; ?></h1>
+            <div class="subtext"><?php echo $parent_type->description; ?></div>
+
+          <!-- Insight -->
+          <?php elseif ( is_singular('investor_insight') ) : ?>
+            <?php $parent_type = get_post_type_object( 'investor_insight' ); ?>
+            <h1 class="page-title"><a href="/investor-insights/"><i class="material-icons">chevron_left</i><?php echo $parent_type->labels->name; ?></a></h1>
             <div class="subtext"><?php echo $parent_type->description; ?></div>
 
           <!-- Blog posts/archives -->

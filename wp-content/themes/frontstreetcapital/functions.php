@@ -33,6 +33,18 @@ add_filter( 'get_the_archive_title', function ($title) {
 
 });
 
+// Posts per page on Investor Insights post archive
+function change_posts_per_page( $query ) {
+    if ( is_admin() || ! $query->is_main_query() ) {
+       return;
+    }
+
+    if ( is_post_type_archive( 'investor_insight' ) ) {
+       $query->set( 'posts_per_page', 20 );
+    }
+}
+add_filter( 'pre_get_posts', 'change_posts_per_page' );
+
 /*------------------------------------*\
 Functions
 \*------------------------------------*/
