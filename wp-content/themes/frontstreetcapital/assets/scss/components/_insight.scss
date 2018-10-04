@@ -1,7 +1,4 @@
 .investor_insight {
-  @include media-breakpoint-down(sm) {
-    border-bottom: 1px solid $border-color;
-  }
   a {
     text-decoration: none;
   }
