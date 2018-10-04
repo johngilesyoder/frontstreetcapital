@@ -21,6 +21,8 @@
     <!-- =================================== -->
     <?php wp_head(); ?>
 
+    <?php get_template_part( 'includes/mixpanel' ); ?>
+
   </head>
 
   <?php if (is_home()) : ?>

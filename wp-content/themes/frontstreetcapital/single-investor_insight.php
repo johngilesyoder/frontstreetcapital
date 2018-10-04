@@ -13,7 +13,7 @@
 
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-8">
+			<div class="col-md-8">
 
 				<?php if ( have_posts() ) : while (have_posts() ) : the_post(); ?>
 
@@ -27,6 +27,8 @@
 						<div class="insight-excerpt">
 							<?php the_excerpt(); ?>
 						</div>
+
+						<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/309293326&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
 
 						<!-- post thumbnail -->
 						<?php if ( has_post_thumbnail() ) : // Check if Thumbnail exists. ?>
