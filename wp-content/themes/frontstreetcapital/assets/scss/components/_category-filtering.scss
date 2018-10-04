@@ -38,14 +38,16 @@
         color: $gray-dark;
         border-bottom: 4px solid transparent;
         font-family: $font-family-sans-serif;
-        font-size: $font-size-14;
+        font-size: $font-size-16;
         font-weight: 500;
-        padding: 4px 10px 0;
+        padding: 4px 20px 0;
         line-height: 46px;
         display: block;
         text-decoration: none;
         @include media-breakpoint-down(sm) {
           line-height: 36px;
+          padding: 4px 10px 0;
+          font-size: $font-size-14;
         }
         &:hover {
           background: $gray-100;
