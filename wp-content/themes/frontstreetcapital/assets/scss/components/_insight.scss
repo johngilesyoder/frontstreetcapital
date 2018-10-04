@@ -11,6 +11,9 @@
       height: 12vw;
       object-fit: cover;
       object-position: 50% 50%;
+      @include media-breakpoint-down(sm) {
+        height: 50vw;
+      }
     }
     .has-media {
       color: $white;

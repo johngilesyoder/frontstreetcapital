@@ -5,16 +5,16 @@
 
 		<div class="row">
 			<?php if ( has_post_thumbnail() ) : ?>
-				<div class="col-2">
+				<div class="col-md-3 col-lg-2">
 					<!-- post thumbnail -->
 						<a href="<?php the_permalink(); ?>" class="post-thumbnail" title="<?php the_title_attribute(); ?>">
-							<?php the_post_thumbnail( array( 120, 120 ) ); // Declare pixel size you need inside the array. ?>
+							<?php the_post_thumbnail( array( 600, 600 ) ); // Declare pixel size you need inside the array. ?>
 						</a>
 					<!-- /post thumbnail -->
 				</div>
 			<?php endif; ?>
 			<?php if ( has_post_thumbnail() ) : ?>
-				<div class="col-10">
+				<div class="col-md-9 col-lg-10">
 			<?php else : ?>
 				<div class="col-12">
 			<?php endif; ?>

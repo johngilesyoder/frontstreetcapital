@@ -5,12 +5,16 @@ select {
 }
 
 .gform_wrapper {
+  margin: 0 !important;
   .validation_error {
     font-family: $font-family-sans-serif;
     border: 0 !important;
     @extend .alert;
     @extend .alert-danger;
     font-weight: 500 !important;
+    @include media-breakpoint-down(sm) {
+      margin: 0 0 15px;
+    }
   }
   .gform_fields {
     display: flex !important;
@@ -32,6 +36,9 @@ select {
         textarea {
           border-color: $form-feedback-invalid-color;
         }
+        & + .gfield_error {
+          margin-top: 15px !important;
+        }
       }
       .gfield_label {
         display: none;
@@ -52,6 +59,9 @@ select {
     #field_1_1,
     #field_1_2 {
       width: calc(50% - 15px) !important;
+      @include media-breakpoint-down(sm) {
+        width: 100% !important;
+      }
     }
     #field_1_3,
     #field_1_4 {
@@ -69,7 +79,11 @@ select {
       margin: 0 !important;
     }
     .gform_ajax_spinner {
-
+      width: auto;
+      @include media-breakpoint-down(sm) {
+        margin: 10px auto 0;
+        float: none;
+      }
     }
   }
 }

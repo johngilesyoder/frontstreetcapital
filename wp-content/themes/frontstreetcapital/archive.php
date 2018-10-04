@@ -7,9 +7,9 @@
 
 	<div class="container-fluid">
 		<div class="row justify-content-between">
-			<div class="col-8">
+			<div class="col-lg-8">
 
-				<h1><?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?></h1>
+				<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
 
 				<div class="article-loop">
 					<?php get_template_part( 'loop' ); ?>
@@ -18,7 +18,7 @@
 				<?php bootstrap_pagination(); ?>
 
 			</div>
-			<div class="col-3">
+			<div class="col-lg-4">
 				<?php get_sidebar(); ?>
 			</div>
 		</div>

@@ -1,15 +1,25 @@
 .sidebar-blog {
+  @media only screen and (min-width: 1620px) {
+    width: 75%;
+    float: right;
+  }
   .sidebar-widget {
-    margin: 0 0 $grid-gutter-width;
+
   }
   #custom_html-2 {
     background: $gray-100;
     padding: $grid-gutter-width;
     margin: 0 0 ($grid-gutter-width / 2);
+    @include media-breakpoint-down(xs) {
+      padding: $grid-gutter-width 15px;
+    }
     h3 {
       font-family: $font-family-sans-serif;
       font-size: $font-size-base;
       margin: 0 0 $grid-gutter-width;
+      @include media-breakpoint-down(sm) {
+        margin: 0 0 15px;
+      }
     }
   }
   .widget_search {
@@ -51,10 +61,16 @@
   }
   .popular-posts {
     margin: 0 0 ($grid-gutter-width * 2);
+    @include media-breakpoint-down(md) {
+      margin: 0 0 $grid-gutter-width;
+    }
     h3 {
       font-family: $font-family-sans-serif;
       font-size: $font-size-base;
       margin: 0 0 ($grid-gutter-width / 2);
+      @include media-breakpoint-down(sm) {
+        margin: 0 0 15px;
+      }
       &:before {
         font-family: 'Material Icons';
         content: '\e8e5';
@@ -80,10 +96,19 @@
     background: $gray-100;
     padding: $grid-gutter-width;
     margin: 0 0 ($grid-gutter-width * 2);
+    @include media-breakpoint-down(md) {
+      margin: 0 0 $grid-gutter-width;
+    }
+    @include media-breakpoint-down(sm) {;
+      padding: $grid-gutter-width 15px;
+    }
     h3 {
       font-family: $font-family-sans-serif;
       font-size: $font-size-base;
       margin: 0 0 $grid-gutter-width;
+      @include media-breakpoint-down(sm) {
+        margin: 0 0 15px;
+      }
     }
   }
   .widget_tag_cloud {

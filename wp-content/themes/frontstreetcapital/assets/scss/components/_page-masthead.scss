@@ -9,8 +9,15 @@
   margin: 0 0 ($grid-gutter-width * 2);
   background-size: cover;
   background-position: 50% 50%;
+  @include media-breakpoint-down(sm) {
+    padding: $header-height-sm 0 $grid-gutter-width;
+    margin: 0 0 $grid-gutter-width;
+  }
   .masthead-content {
     margin-top: ($grid-gutter-width * 2);
+    @include media-breakpoint-down(sm) {
+      margin-top: $grid-gutter-width;
+    }
     .page-title {
       color: $white;
       font-family: $font-family-display;
@@ -18,13 +25,30 @@
       letter-spacing: .5px;
       line-height: 1.125;
       margin: 0 0 ($grid-gutter-width / 2);
+      @include media-breakpoint-down(md) {
+        font-size: $font-size-display-md;
+      }
+      @include media-breakpoint-down(sm) {
+        font-size: $font-size-display-sm;
+      }
+      @include media-breakpoint-down(xs) {
+        font-size: $font-size-display-xs;
+      }
     }
     .subtext {
       margin: 0;
       font-size: $font-size-21;
       font-weight: 500;
+      @include media-breakpoint-down(sm) {
+        font-size: $font-size-base;
+        line-height: 1.25;
+      }
       p {
         font-size: $font-size-21;
+        @include media-breakpoint-down(sm) {
+          font-size: $font-size-base;
+          line-height: 1.25;
+        }
         &:last-child {
           margin: 0;
         }
@@ -49,6 +73,9 @@
 .single-post {
   .page-masthead {
     padding: $header-height 0 $grid-gutter-width;
+    @include media-breakpoint-down(sm) {
+      padding: $header-height-sm 0 $grid-gutter-width;
+    }
     .masthead-content {
       margin-top: $grid-gutter-width;
       .page-title {

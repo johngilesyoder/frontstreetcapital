@@ -4,10 +4,10 @@
       <span class="preheader"><?php the_field('mission_statement_preheader'); ?></span>
       <h3 class="card-title"><?php the_field('mission_statement_headline'); ?></h3>
       <div class="row">
-        <div class="col">
+        <div class="col-md-6 left">
           <?php the_field('mission_statement_left_content'); ?>
         </div>
-        <div class="col">
+        <div class="col-md-6 right">
           <?php the_field('mission_statement_right_content'); ?>
         </div>
       </div>

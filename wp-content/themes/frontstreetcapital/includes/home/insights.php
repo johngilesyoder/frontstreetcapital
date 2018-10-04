@@ -48,14 +48,12 @@
       <span><i class="material-icons">chevron_right</i></span>
     </button>
   </div>
-  <div class="container-fluid">
-    <div class="section-follow-up">
-      <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div class="col-8">
-            <?php the_field('investor_insights_follow_up'); ?>
-            <a href="/investor-insights/" class="btn btn-lg btn-primary">Explore Investor Insights</a>
-          </div>
+  <div class="section-follow-up">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <?php the_field('investor_insights_follow_up'); ?>
+          <a href="/investor-insights/" class="btn btn-lg btn-primary">Explore Investor Insights</a>
         </div>
       </div>
     </div>

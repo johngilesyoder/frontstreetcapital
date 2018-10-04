@@ -16,12 +16,27 @@
       justify-content: center;
       margin: 0 0 $grid-gutter-width;
       transition: transform 200ms, box-shadow 200ms;
+      @include media-breakpoint-down(md) {
+        width: calc(50% - 15px);
+        padding: $grid-gutter-width;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        margin: 0 0 15px;
+        padding: $grid-gutter-width;
+      }
       &:hover {
         transform: translateY(-2px) scale(1.025);
         box-shadow: 0 2px 6px rgba(0,0,0,.08);
       }
       img {
         max-width: 60%;
+        @include media-breakpoint-down(lg) {
+          max-width: 100%
+        }
+        @include media-breakpoint-down(md) {
+          max-width: 60%;
+        }
       }
       &:empty {
         height: 0;

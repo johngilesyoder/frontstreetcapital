@@ -4,5 +4,6 @@
   </div>
   <nav role="navigation">
     <?php primary_nav(); ?>
+    <button type="button" class="btn-account-access" data-type="open-account-access">Account Access</button>
   </nav>
 </div>

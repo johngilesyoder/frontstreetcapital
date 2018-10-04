@@ -19,7 +19,7 @@ $blog_masthead = get_field('blog_header_background', 'option');
 <?php endif; ?>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-6">
+      <div class="col-md-10 col-lg-6">
         <div class="masthead-content">
 
           <!-- Investor Insights -->

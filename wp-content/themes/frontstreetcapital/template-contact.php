@@ -16,7 +16,7 @@ $phone_unformatted = preg_replace('/\D+/', '', $phone);
 
 				<div class="methods">
 					<div class="row">
-						<div class="col-4">
+						<div class="col-lg-4">
 							<div class="contact-card">
 								<h4 class="method-title">Front Street Capital Management</h4>
 								<address>
@@ -26,7 +26,7 @@ $phone_unformatted = preg_replace('/\D+/', '', $phone);
 								<p><a href="mailto:<?php the_field('email_address', 'option'); ?>"><?php the_field('email_address', 'option'); ?></a></p>
 							</div>
 						</div>
-						<div class="col-8">
+						<div class="col-lg-8">
 							<div class="contact-form">
 								<h4 class="method-title">Send us a message or schedule a consultation</h4>
 								<?php gravity_form( 1, false, false, false, '', true ); ?>

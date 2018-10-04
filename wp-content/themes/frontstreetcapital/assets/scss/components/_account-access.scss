@@ -16,6 +16,9 @@
   visibility: hidden;
   transition: visibility 0s linear .5s, opacity .5s, backdrop-filter .15s;
   backdrop-filter: blur(0);
+  @include media-breakpoint-down(sm) {
+    padding: 0 ($grid-gutter-width / 2);
+  }
   a {
     color: $primary-inverted;
     &:hover {
@@ -27,6 +30,9 @@
     align-items: center;
     justify-content: flex-end;
     height: $header-height;
+    @include media-breakpoint-down(sm) {
+      height: $header-height-sm;
+    }
   }
   .btn-close-account-access {
     background: transparent;
@@ -39,6 +45,9 @@
     i {
       line-height: 1;
       font-size: 50px;
+      @include media-breakpoint-down(sm) {
+        font-size: 36px;
+      }
     }
   }
   .brokers {
@@ -55,6 +64,9 @@
       width: calc(50% - 7.5px);
       padding: ($grid-gutter-width / 2);
       transition: background 150ms;
+      @include media-breakpoint-down(xs) {
+        width: 100%;
+      }
       &:hover {
         background: rgba(#999, .4);
       }

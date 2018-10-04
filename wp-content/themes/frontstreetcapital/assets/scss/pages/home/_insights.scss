@@ -1,12 +1,18 @@
 .home-insights {
   padding: ($grid-gutter-width * 2.666) 0;
   background: $white;
+  @include media-breakpoint-down(sm) {
+    padding: $grid-gutter-width 0;
+  }
   .carousel-wrapper {
     position: relative;
   }
   .insights-carousel {
     .slick-list {
       padding: 0 45px;
+      @include media-breakpoint-down(sm) {
+        padding: 0;
+      }
     }
     .investor_insight {
       padding: 0 15px;
@@ -20,9 +26,13 @@
     background-color: transparent;
     border: 0;
     background-size: cover;
+    background-repeat: no-repeat;
     padding: 0;
     width: 190px;
     transition: 150ms opacity;
+    @include media-breakpoint-down(sm) {
+      display: none !important;
+    }
     &.slick-disabled {
       opacity: 0;
     }

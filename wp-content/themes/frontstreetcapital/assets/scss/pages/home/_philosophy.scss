@@ -2,20 +2,38 @@
   .grid-row {
     display: flex;
     justify-content: space-between;
+    flex-flow: row wrap;
     &:not(:last-child) {
       margin-bottom: $grid-gutter-width;
+    }
+    @include media-breakpoint-down(sm) {
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
     }
     .grid-column {
       width: calc(50% - 15px);
       display: flex;
       flex-flow: column;
       justify-content: space-between;
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
     }
     .grid-block {
+      @include media-breakpoint-down(sm) {
+        margin: 0 0 ($grid-gutter-width / 2);
+      }
       // Large block
       &.grid-block-lg {
         background: $white;
         padding: ($grid-gutter-width * 2);
+        @include media-breakpoint-down(sm) {
+          padding: $grid-gutter-width;
+        }
+        @include media-breakpoint-down(xs) {
+          padding: $grid-gutter-width ($grid-gutter-width / 2);
+        }
         .card-title-sm {
           font-size: $font-size-base;
           margin: $grid-gutter-width 0 ($grid-gutter-width / 2);
@@ -33,12 +51,23 @@
         padding: $grid-gutter-width;
         display: flex;
         align-items: flex-start;
+        @include media-breakpoint-down(sm) {
+          padding: ($grid-gutter-width / 2);
+          flex-flow: column;
+        }
+        @include media-breakpoint-down(xs) {
+          display: none;
+        }
         i {
           font-size: $font-size-display;
           color: rgba($white, .3);
           transform: scale(-1, -1);
           line-height: 25px;
           margin-right: ($grid-gutter-width / 2);
+          @include media-breakpoint-down(xs) {
+            margin: 0 0 15px;
+            font-size: $font-size-42;
+          }
         }
         blockquote {
           margin: 0;
@@ -46,6 +75,9 @@
             font-style: italic;
             font-weight: 500;
             line-height: 1.25;
+            @include media-breakpoint-down(xs) {
+              font-size: $font-size-base;
+            }
           }
           .blockquote-footer {
             font-size: $font-size-16;
@@ -62,6 +94,9 @@
         background-position: 50% 50%;
         flex: 1 0 auto;
         margin-top: $grid-gutter-width;
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
       }
       // Long term
       &.grid-block-long-term {
@@ -69,14 +104,26 @@
         background: $white;
         display: flex;
         justify-content: space-between;
+        flex-flow: row wrap;
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+        }
         .text-wrapper {
           padding: $grid-gutter-width;
           width: calc(66.6666% - 15px);
+          @include media-breakpoint-down(sm) {
+            padding: $grid-gutter-width ($grid-gutter-width / 2);
+            width: 100%;
+          }
         }
         .block-photo {
           width: calc(33.3333% - 15px);
           background-size: cover;
           background-position: 50% 50%;
+          @include media-breakpoint-down(sm) {
+            width: 100%;
+            height: 80vw;
+          }
         }
         p {
           &:last-child {
@@ -89,6 +136,12 @@
         width: calc(33.3333% - 15px);
         background: $white;
         padding: $grid-gutter-width;
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+        }
+        @include media-breakpoint-down(xs) {
+          padding: $grid-gutter-width ($grid-gutter-width / 2);
+        }
         p {
           &:last-child {
             margin: 0;

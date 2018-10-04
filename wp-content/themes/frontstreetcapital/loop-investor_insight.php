@@ -1,6 +1,6 @@
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-	<div class="col-3">
+	<div class="col-md-6 col-lg-4 col-xl-3">
 
 		<!-- Insight -->
 		<!-- =================================== -->

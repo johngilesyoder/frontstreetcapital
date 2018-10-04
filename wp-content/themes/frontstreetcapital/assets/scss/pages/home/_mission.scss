@@ -5,6 +5,22 @@
     background: $white;
     padding: $grid-gutter-width;
     @include elevate;
+    @include media-breakpoint-down(sm) {
+      padding: ($grid-gutter-width / 2);
+    }
+  }
+  .left {
+    @include media-breakpoint-down(sm) {
+      margin: 0 0 $grid-gutter-width;
+    }
+    @include media-breakpoint-down(xs) {
+      margin: 0 0 ($grid-gutter-width / 2);
+    }
+  }
+  .right p:last-child {
+    @include media-breakpoint-down(sm) {
+      margin: 0;
+    }
   }
   ul {
     @include list-unstyled;

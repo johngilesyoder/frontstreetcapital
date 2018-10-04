@@ -10,11 +10,18 @@
   z-index: 1000;
   padding: 0 ($grid-gutter-width * 2) ($grid-gutter-width * 2);
   backdrop-filter: blur(0);
+  @include media-breakpoint-down(sm) {
+    left: 0;
+    padding: 0 ($grid-gutter-width / 2) ($grid-gutter-width / 2);
+  }
   .menu-header {
     height: $header-height;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    @include media-breakpoint-down(sm) {
+      height: $header-height-sm;
+    }
   }
   .btn-close-menu {
     background: transparent;
@@ -27,11 +34,17 @@
     i {
       line-height: 1;
       font-size: 50px;
+      @include media-breakpoint-down(sm) {
+        font-size: 36px;
+      }
     }
   }
   nav {
     text-align: right;
-    a {
+    a,
+    button {
+      background: transparent;
+      border: 0;
       font-size: $font-size-42;
       font-family: $font-family-display;
       color: $white;
@@ -40,11 +53,24 @@
       display: block;
       text-decoration: none;
       line-height: 1.6666;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      text-align: right;
+      cursor: pointer;
+      @include media-breakpoint-down(sm) {
+        font-size: $font-size-24;
+      }
       &:hover {
         opacity: 1;
       }
       &.current-menu-item {
         opacity: 1;
+      }
+    }
+    .btn-account-access {
+      @include media-breakpoint-up(md) {
+        display: none;
       }
     }
   }

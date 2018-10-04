@@ -15,7 +15,7 @@
 				<!-- ==== Site Logo ==== -->
 				<div class="site-logo">
 					<a href="/">
-						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/site-logo.png" alt="Cluney Photo">
+						<img src="<?php echo get_template_directory_uri(); ?>/assets/img/site-logo.png" alt="Front Street Capital Management">
           </a>
 				</div>
 			</div>

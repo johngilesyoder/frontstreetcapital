@@ -42,6 +42,7 @@ $font-family-display:         BentonSansCond, -apple-system, BlinkMacSystemFont,
 $font-family-base:            $font-family-serif;
 
 $font-size-base:              1.125rem;
+$font-size-12:                ($font-size-base * 0.6666);
 $font-size-13:                ($font-size-base * 0.7222);
 $font-size-14:                ($font-size-base * 0.7778);
 $font-size-15:                ($font-size-base * 0.8333);
@@ -52,6 +53,9 @@ $font-size-30:                ($font-size-base * 1.6666);
 $font-size-36:                ($font-size-base * 2);
 $font-size-42:                ($font-size-base * 2.3333);
 $font-size-display:           ($font-size-base * 3.1666);
+$font-size-display-md:        $font-size-42;
+$font-size-display-sm:        $font-size-36;
+$font-size-display-xs:        $font-size-30;
 
 $headings-font-family:        $font-family-sans-serif;
 $headings-font-weight:        600;
@@ -68,3 +72,4 @@ $btn-font-weight:             500;
 
 // Layout
 $header-height:               115px;
+$header-height-sm:            66px;

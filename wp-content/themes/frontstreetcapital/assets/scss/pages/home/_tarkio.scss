@@ -4,17 +4,41 @@
   background-position: 50% 50%;
   padding: ($grid-gutter-width * 4);
   margin: 0;
+  @include media-breakpoint-down(sm) {
+    padding: $grid-gutter-width 15px;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: $grid-gutter-width 0;
+  }
   .flex-wrapper {
     display: flex;
     justify-content: space-between;
+    flex-flow: row wrap;
+    @include media-breakpoint-down(sm) {
+
+    }
   }
   .tarkio-logo {
     width: calc(33.3333% - 15px);
     background: $white;
     padding: ($grid-gutter-width * 3);
+    text-align: center;
     @include elevate;
+    @include media-breakpoint-down(sm) {
+      padding: $grid-gutter-width $grid-gutter-width 15px;
+      width: 100%;
+    }
+    @include media-breakpoint-down(xs) {
+      padding: $grid-gutter-width 15px;
+    }
     img {
       max-width: 100%;
+      @include media-breakpoint-down(sm) {
+        max-width: 75%;
+      }
+      @include media-breakpoint-down(xs) {
+        max-width: 100%;
+      }
     }
   }
   .tarkio-card {
@@ -22,8 +46,18 @@
     @include elevate;
     padding: ($grid-gutter-width * 2);
     width: calc(66.6666% - 15px);
+    @include media-breakpoint-down(sm) {
+      padding: $grid-gutter-width;
+      width: 100%;
+    }
+    @include media-breakpoint-down(xs) {
+      padding: 15px;
+    }
     .btn {
       font-size: $font-size-base;
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
       i {
         vertical-align: middle;
         font-size: $font-size-base;
@@ -34,6 +68,9 @@
       display: block;
       margin-top: ($grid-gutter-width * 2);
       color: $gray-600;
+      @include media-breakpoint-down(sm) {
+        margin-top: $grid-gutter-width;
+      }
     }
   }
 }

@@ -6,6 +6,11 @@
     main {
       padding-top: 0;
     }
+    .archive-title {
+      @include media-breakpoint-down(xs) {
+        font-size: $font-size-24;
+      }
+    }
   }
 }
 

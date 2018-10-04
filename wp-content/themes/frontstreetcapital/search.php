@@ -4,7 +4,7 @@
 
 	<div class="container-fluid">
 		<div class="row justify-content-between">
-			<div class="col-8">
+			<div class="col-lg-8">
 
 				<h1 class="page-title"><?php echo sprintf( __( '%s Search Results for ', 'html5blank' ), $wp_query->found_posts ); ?>'<?php echo get_search_query(); ?>'</h1>
 
@@ -15,7 +15,7 @@
 				<?php bootstrap_pagination(); ?>
 
 			</div>
-			<div class="col-3">
+			<div class="col-lg-4">
 				<?php get_sidebar(); ?>
 			</div>
 		</div>

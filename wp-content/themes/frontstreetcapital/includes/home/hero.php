@@ -15,7 +15,7 @@
     <div class="hero-panel" style="background-image:url('<?php echo $background['url']; ?>')">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-6">
+          <div class="col-md-10 col-lg-8">
             <div class="hero-content">
               <h2 class="title"><?php echo $headline; ?></h2>
               <p class="subtext"><?php echo $subtext; ?></p>

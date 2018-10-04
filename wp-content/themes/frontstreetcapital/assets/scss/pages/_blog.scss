@@ -4,4 +4,12 @@
   main {
     padding-top: 0;
   }
+  .pagination {
+    @include media-breakpoint-down(sm) {
+      margin: 0 0 $grid-gutter-width;
+    }
+    @include media-breakpoint-down(md) {
+      margin: 0 0 ($grid-gutter-width * 2);
+    }
+  }
 }

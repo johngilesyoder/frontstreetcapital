@@ -44,7 +44,7 @@ $image2 = get_field('philosophy_auxiliary_card_1_image');
   <div class="section-follow-up">
     <div class="container-fluid">
       <div class="row justify-content-center">
-        <div class="col-8">
+        <div class="col-md-8">
           <?php the_field('philosophy_section_follow_up'); ?>
         </div>
       </div>

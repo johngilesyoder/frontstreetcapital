@@ -24,7 +24,16 @@
         slidesToShow: 4,
         infinite: false,
         nextArrow: $('#carousel-next'),
-        prevArrow: $('#carousel-prev')
+        prevArrow: $('#carousel-prev'),
+        responsive: [
+          {
+            breakpoint: 767, // mobile breakpoint
+            settings: {
+              slidesToShow: 1.25,
+              slidesToScroll: 1,
+            }
+          }
+        ]
       });
     });
 

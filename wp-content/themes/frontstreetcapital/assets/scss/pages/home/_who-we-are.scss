@@ -8,16 +8,28 @@
     width: calc(50% - 15px);
     background: $white;
     display: flex;
-    margin: 0 0 $grid-gutter-width;
+    &:not(:last-child) {
+      margin: 0 0 $grid-gutter-width;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
     .person-photo {
       width: 33.3333%;
       height: 100%;
       object-fit: cover;
       object-position: 50% 50%;
+      @include media-breakpoint-down(sm) {
+        width: 25%;
+      }
     }
     .person-content {
       padding: $grid-gutter-width;
       width: 66.6666%;
+      @include media-breakpoint-down(sm) {
+        padding: 15px;
+        width: 75%;
+      }
     }
     .person-name {
       font-size: $font-size-24;
@@ -28,8 +40,14 @@
     .person-title {
       @extend .preheader;
       margin: 0 0 ($grid-gutter-width / 2);
+      @include media-breakpoint-down(sm) {
+        margin: 0;
+      }
     }
     .person-description {
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
       p {
         line-height: 1.3333;
       }

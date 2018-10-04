@@ -1,7 +1,17 @@
 .site-header {
-  padding: 30px 0;
+  padding: $grid-gutter-width 0;
   position: relative;
   z-index: 100;
+  @include media-breakpoint-down(sm) {
+    padding: ($grid-gutter-width / 2) 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 400;
+    background: $white;
+    border-bottom: 1px solid $border-color;
+  }
   .flex-wrapper {
     display: flex;
     align-items: center;
@@ -10,6 +20,12 @@
   .site-logo {
     img {
       height: 55px;
+      @include media-breakpoint-down(md) {
+        height: 40px;
+      }
+      @include media-breakpoint-down(sm) {
+        height: 36px;
+      }
     }
   }
   .site-navigation {
@@ -20,6 +36,17 @@
     a,
     button {
       margin-right: 40px;
+      @include media-breakpoint-down(md) {
+        margin-right: 20px;
+      }
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+    button {
+      @include media-breakpoint-down(md) {
+        margin-right: 40px;
+      }
     }
     a {
       font-family: $font-family-sans-serif;
@@ -37,6 +64,11 @@
     padding: 0;
     margin: 0;
     cursor: pointer;
+    img {
+      @include media-breakpoint-down(sm) {
+        height: 18px;
+      }
+    }
   }
 }
 
@@ -46,7 +78,13 @@
   left: 0;
   right: 0;
   width: 100%;
-  @include gradient-y($start-color: rgba(#07090A, .18), $end-color: rgba(#07090A, 0), $start-percent: 0%, $end-percent: 100%)
+  @include gradient-y($start-color: rgba(#07090A, .18), $end-color: rgba(#07090A, 0), $start-percent: 0%, $end-percent: 100%);
+  @include media-breakpoint-down(sm) {
+    background: rgba($gray-dark, .93);
+    backdrop-filter: blur(0);
+    position: fixed;
+    border: 0;
+  }
   .nav-quick-access {
     a {
       color: $white;

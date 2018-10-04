@@ -1,7 +1,7 @@
 <section class="home-contact">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-8">
+      <div class="col-md-8">
         <div class="card-contact">
           <h2 class="section-title">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/site-logo-black.png">

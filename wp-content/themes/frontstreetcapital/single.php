@@ -8,7 +8,7 @@
 
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-6 offset-2">
+			<div class="col-lg-8 col-xl-6 offset-xl-1">
 
 			<?php if ( have_posts() ) : while (have_posts() ) : the_post(); ?>
 
@@ -68,7 +68,7 @@
 			<?php endif; ?>
 
 			</div>
-			<div class="col-3 offset-1">
+			<div class="col-lg-4 col-xl-4 offset-xl-1">
 				<?php get_sidebar(); ?>
 			</div>
 		</div>
