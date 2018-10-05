@@ -9878,6 +9878,13 @@
 		"oAP": "/includes/account-access.php",
 		"oF": 0
 		},
+	"/includes/analytics.php": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "/includes/analytics.php",
+		"oF": 0
+		},
 	"/includes/analyticstracking.php": {
 		"cB": 0,
 		"ft": 8192,
@@ -9960,13 +9967,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "/includes/mailchimp.php",
-		"oF": 0
-		},
-	"/includes/mixpanel.php": {
-		"cB": 0,
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "/includes/mixpanel.php",
 		"oF": 0
 		},
 	"/includes/off-canvas-menu.php": {

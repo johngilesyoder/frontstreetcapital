@@ -2,6 +2,10 @@
 <html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" <?php language_attributes(); ?>>
   <head <?php do_action( 'add_head_attributes' ); ?>>
 
+    <!-- Google Analytics -->
+    <!-- =================================== -->
+    <?php get_template_part( 'includes/analytics' ); ?>
+    
     <!-- Title -->
     <!-- =================================== -->
     <title><?php wp_title(''); ?></title>
@@ -21,8 +25,6 @@
     <!-- =================================== -->
     <?php wp_head(); ?>
 
-    <?php get_template_part( 'includes/mixpanel' ); ?>
-
   </head>
 
   <?php if (is_home()) : ?>
@@ -30,10 +32,6 @@
   <?php else: ?>
     <body <?php body_class(); ?>>
   <?php endif; ?>
-
-    <!-- Google Analytics -->
-    <!-- =================================== -->
-    <?php get_template_part( 'includes/analyticstracking' ); ?>
 
 
     <?php if ( !is_404() ) : ?>
