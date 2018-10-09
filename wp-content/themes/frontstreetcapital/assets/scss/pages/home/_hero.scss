@@ -1,9 +1,9 @@
 .home-hero {
   margin-bottom: -$header-height;
   overflow: hidden;
-  height: calc(100vh - 60px);
+  height: auto;
   @include media-breakpoint-down(sm) {
-    height: auto;
+    height: calc(100vh - 60px);
     margin-bottom: -$header-height-sm;
   }
   .hero-panel {
