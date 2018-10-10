@@ -7,9 +7,11 @@
     <a href="<?php the_permalink(); ?>" class="feature-img" title="<?php the_title_attribute(); ?>">
       <?php the_post_thumbnail( 'full' ); ?>
       <?php if( get_field('insight_video') ) : ?>
-        <span class="has-media video"><icon class="material-icons">play_arrow</i></span>
+        <span class="has-media video"><i class="material-icons">play_arrow</i></span>
       <?php elseif( get_field('insight_audio') ) : ?>
-        <span class="has-media audio"><icon class="material-icons">volume_up</i></span>
+        <span class="has-media audio"><i class="material-icons">volume_up</i></span>
+      <?php elseif( get_field('insight_document') ) : ?>
+        <span class="has-media document"><i class="material-icons">insert_drive_file</i></span>
       <?php endif; ?>
     </a>
   <?php else : ?>

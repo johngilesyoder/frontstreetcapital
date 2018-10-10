@@ -22,3 +22,13 @@
     }
   }
 }
+
+.single-investor_insight {
+  .investor_insight {
+    border: 0;
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+}

@@ -24,7 +24,6 @@
 							<?php the_excerpt(); ?>
 						</div>
 
-						<!-- post thumbnail -->
 						<?php if ( get_field('amazon_link') ) : ?>
 							<a class="amazon-product" target="_blank" href="<?php the_field('amazon_link'); ?>">
 								<span class="view-on-amazon">
@@ -32,6 +31,23 @@
 									<i class="material-icons">launch</i>
 								</span>
 								<?php the_post_thumbnail(); ?>
+							</a>
+						<?php endif; ?>
+
+						<?php if ( get_field('insight_document') ) : ?>
+							<?php $file = get_field('insight_document'); ?>
+							<a href="<?php echo $file['url']; ?>" class="document">
+								<div class="icon">
+									<i class="material-icons">insert_drive_file</i>
+								</div>
+								<div class="details">
+									<h4 class="document-title"><?php echo $file['filename']; ?></h4>
+								</div>
+								<div class="view">
+									<span class="view-link">
+										<i class="material-icons">chevron_right</i>
+									</span>
+								</div>
 							</a>
 						<?php endif; ?>
 

@@ -38,6 +38,12 @@
       &.audio {
         background: $blue;
       }
+      &.document {
+        background: $red;
+        i {
+          font-size: $font-size-16;
+        }
+      }
     }
   }
   .preheader {
