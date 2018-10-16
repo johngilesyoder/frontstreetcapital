@@ -43,15 +43,16 @@
       width: 50%;
     }
     img {
-      max-width: 75%;
+      height: auto;
+      width: 75%;
       @include media-breakpoint-down(lg) {
-        max-width: 250px;
+        width: 250px;
       }
       @include media-breakpoint-down(sm) {
-        max-width: 75%;
+        width: 75%;
       }
       @include media-breakpoint-down(xs) {
-        max-width: 100%;
+        width: 100%;
       }
     }
   }

@@ -7,7 +7,7 @@
   $title = get_sub_field('member_title');
 ?>
 <div class="person">
-  <img class="person-photo" src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt'] ?>">
+  <div class="person-photo" style="background-image:url('<?php echo $photo['url']; ?>');" alt="<?php echo $photo['alt'] ?>"></div>
   <div class="person-content">
     <h4 class="person-name"><?php echo $name; ?></h4>
     <span class="person-title"><?php echo $title; ?></span>

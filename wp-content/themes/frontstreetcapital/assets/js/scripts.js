@@ -16,7 +16,7 @@
 
 		// Account Access toggle (open)
 		$(document).on('click', '[data-type="open-account-access"]', function() {
-			$("#off-canvas-menu").toggleClass( "is--open" );
+			$("#off-canvas-menu").removeClass( "is--open" );
 		  $("#account-access").toggleClass( "is--open" );
 			$("body").toggleClass( "no-scroll" );
 		});

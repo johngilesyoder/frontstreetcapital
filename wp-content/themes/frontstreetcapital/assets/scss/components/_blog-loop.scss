@@ -35,22 +35,18 @@
     }
     .post-thumbnail {
       display: block;
-      @include media-breakpoint-down(sm) {
-        margin: 0 0 15px;
+      width: 100%;
+      height: 8vw;
+      background-size: cover;
+      background-position: 50% 50%;
+      @include media-breakpoint-down(md) {
+        height: 15vw;
       }
-      img {
-        width: 100%;
-        height: 8vw;
+      @include media-breakpoint-down(sm) {
         object-fit: cover;
         object-position: 50% 50%;
-        @include media-breakpoint-down(md) {
-          height: 15vw;
-        }
-        @include media-breakpoint-down(sm) {
-          object-fit: cover;
-          object-position: 50% 50%;
-          height: 50vw;
-        }
+        height: 50vw;
+        margin: 0 0 15px;
       }
     }
   }

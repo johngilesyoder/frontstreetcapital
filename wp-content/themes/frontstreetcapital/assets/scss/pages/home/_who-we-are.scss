@@ -17,8 +17,8 @@
     .person-photo {
       width: 33.3333%;
       height: 100%;
-      object-fit: cover;
-      object-position: 50% 50%;
+      background-size: cover;
+      background-position: 50% 50%;
       @include media-breakpoint-down(sm) {
         width: 25%;
       }

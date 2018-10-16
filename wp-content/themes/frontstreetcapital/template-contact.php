@@ -47,7 +47,7 @@ $phone_unformatted = preg_replace('/\D+/', '', $phone);
 			</article>
 
 		<?php endif; ?>
-
+		</div>
 	</main>
 
 <?php get_footer(); ?>

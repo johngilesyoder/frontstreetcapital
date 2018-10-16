@@ -7,9 +7,7 @@
 			<?php if ( has_post_thumbnail() ) : ?>
 				<div class="col-md-3 col-lg-2">
 					<!-- post thumbnail -->
-						<a href="<?php the_permalink(); ?>" class="post-thumbnail" title="<?php the_title_attribute(); ?>">
-							<?php the_post_thumbnail( array( 600, 600 ) ); // Declare pixel size you need inside the array. ?>
-						</a>
+						<a href="<?php the_permalink(); ?>" class="post-thumbnail" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php the_post_thumbnail_url( array( 600, 600 ) ); ?>')"></a>
 					<!-- /post thumbnail -->
 				</div>
 			<?php endif; ?>

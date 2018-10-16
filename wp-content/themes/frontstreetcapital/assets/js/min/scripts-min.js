@@ -1,10 +1,10 @@
-!function(c,o,e){c(function(){"use strict";
+!function(o,e,c){o(function(){"use strict";
 // DOM ready, take it away
 // Mobile header toggle (open)
-c(document).on("click",'[data-type="open-header-menu"]',function(o){o.preventDefault(),c("#off-canvas-menu").toggleClass("is--open")}),
+o(document).on("click",'[data-type="open-header-menu"]',function(e){e.preventDefault(),o("#off-canvas-menu").toggleClass("is--open")}),
 // Mobile header toggle (close)
-c(document).on("click",'[data-type="close-header-menu"]',function(){c("#off-canvas-menu").toggleClass("is--open")}),
+o(document).on("click",'[data-type="close-header-menu"]',function(){o("#off-canvas-menu").toggleClass("is--open")}),
 // Account Access toggle (open)
-c(document).on("click",'[data-type="open-account-access"]',function(){c("#off-canvas-menu").toggleClass("is--open"),c("#account-access").toggleClass("is--open"),c("body").toggleClass("no-scroll")}),
+o(document).on("click",'[data-type="open-account-access"]',function(){o("#off-canvas-menu").removeClass("is--open"),o("#account-access").toggleClass("is--open"),o("body").toggleClass("no-scroll")}),
 // Account Access toggle (close)
-c(document).on("click",'[data-type="close-account-access"]',function(){c("#account-access").toggleClass("is--open"),c("body").toggleClass("no-scroll")})})}(jQuery,this);
+o(document).on("click",'[data-type="close-account-access"]',function(){o("#account-access").toggleClass("is--open"),o("body").toggleClass("no-scroll")})})}(jQuery,this);

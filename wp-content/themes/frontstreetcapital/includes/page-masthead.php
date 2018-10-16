@@ -42,7 +42,7 @@ $blog_masthead = get_field('blog_header_background', 'option');
           <!-- Blog posts/archives -->
         <?php elseif (is_singular('post') || is_date() || is_tag() || is_author() ) : ?>
             <h2 class="page-title"><a href="/blog/"><i class="material-icons">chevron_left</i>Blog</a></h2>
-            <div class="subtext">Read on for information to help you lead a smarter financial life.</div>
+            <div class="subtext"><?php the_field('blog_summary', 'options'); ?></div>
 
           <!-- Blog page -->
           <?php elseif ( is_home() ) : ?>

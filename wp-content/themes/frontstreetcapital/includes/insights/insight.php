@@ -4,8 +4,7 @@
   <!-- post thumbnail -->
   <?php if ( has_post_thumbnail() ) : // Check if thumbnail exists. ?>
     <!-- /post thumbnail -->
-    <a href="<?php the_permalink(); ?>" class="feature-img" title="<?php the_title_attribute(); ?>">
-      <?php the_post_thumbnail( 'full' ); ?>
+    <a href="<?php the_permalink(); ?>" class="feature-img" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php the_post_thumbnail_url( 'full' ); ?>')">
       <?php if( get_field('insight_video') ) : ?>
         <span class="has-media video"><i class="material-icons">play_arrow</i></span>
       <?php elseif( get_field('insight_audio') ) : ?>
@@ -16,9 +15,7 @@
     </a>
   <?php else : ?>
     <!-- /post thumbnail -->
-    <a href="<?php the_permalink(); ?>" class="feature-img" title="<?php the_title_attribute(); ?>">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/default-insight.jpg">
-    </a>
+    <a href="<?php the_permalink(); ?>" class="feature-img" title="<?php the_title_attribute(); ?>" style="background-image:url('<?php echo get_template_directory_uri(); ?>/assets/img/default-insight.jpg')"></a>
   <?php endif; ?>
   <span class="preheader"><?php foreach ( $terms as $term ) { echo $term->name; } ?></span>
   <h3 class="insight-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
