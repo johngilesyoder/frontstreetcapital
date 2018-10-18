@@ -9,7 +9,7 @@
             <div class="col-lg-3 col-md-6">
               <div class="footer-column footer-message">
                 <img class="site-logo" src="<?php echo get_template_directory_uri(); ?>/assets/img/site-logo-white.png" alt="Front Street Capital Management, Inc.">
-                <small><?php the_field('disclaimer', 'option'); ?></small>
+                <!-- <small><?php the_field('disclaimer', 'option'); ?></small> -->
               </div>
             </div>
             <div class="col-lg-3 col-md-6">

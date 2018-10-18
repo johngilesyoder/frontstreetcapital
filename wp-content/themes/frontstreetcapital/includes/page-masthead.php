@@ -47,7 +47,7 @@ $blog_masthead = get_field('blog_header_background', 'option');
           <!-- Blog page -->
           <?php elseif ( is_home() ) : ?>
             <h1 class="page-title">Blog</h1>
-            <div class="subtext">Read on for information to help you lead a smarter financial life.</div>
+            <div class="subtext"><?php the_field('blog_summary', 'options'); ?></div>
 
           <!-- Page Title -->
           <?php else : ?>
