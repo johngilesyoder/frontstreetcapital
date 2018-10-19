@@ -32,6 +32,16 @@
     }
   }
   .footer-newsletter {
+    .gform_confirmation_message {
+      @extend .alert;
+      @extend .alert-success;
+      font-family: $font-family-sans-serif;
+      font-size: $font-size-14;
+      margin-top: 15px;
+    }
+    .gform_button {
+      visibility: hidden !important;
+    }
     @include media-breakpoint-down(md) {
       margin: 0;
     }

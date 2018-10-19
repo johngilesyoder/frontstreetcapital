@@ -26,6 +26,28 @@
 			$("body").toggleClass( "no-scroll" );
 		});
 
+		// Map the Gravity Form fields for the newsletter signup form
+    $( "input[data-input='email']" ).keyup(function() {
+      var value = $( this ).val();
+      $( "#input_2_1" ).attr('value', value );
+    })
+    .keyup();
+
+		$( "button[data-input='submit']" ).on('click', function(){
+			$('#gform_submit_button_2').click();
+		});
+
+		$( "input[data-input='email-blog']" ).keyup(function() {
+      var value = $( this ).val();
+      $( "#input_2_1" ).attr('value', value );
+    })
+    .keyup();
+
+		$( "button[data-input='submit-blog']" ).on('click', function(){
+			$('#gform_submit_button_2').click();
+		});
+
+
 	});
 
 })(jQuery, this);

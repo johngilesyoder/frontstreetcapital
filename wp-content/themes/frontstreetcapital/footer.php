@@ -30,7 +30,17 @@
             <div class="col-lg-3 col-md-6">
               <div class="footer-column footer-newsletter">
                 <h4>Newsletter</h4>
-                <?php the_field('mailing_list_form', 'option'); ?>
+                <form class="mailing-list-form">
+                  <div class="input-group">
+                    <input type="text" class="form-control" data-input="email" placeholder="Your email">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary" data-input="submit" type="button">OK</button>
+                    </div>
+                  </div>
+                </form>
+                <!-- THE GRAVITY FORM -->
+    			      <!-- ================ -->
+    			      <?php gravity_form( 2, false, false, false, '', true ); ?>
               </div>
             </div>
           </div>
