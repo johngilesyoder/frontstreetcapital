@@ -1,7 +1,7 @@
 .home-hero {
   margin-bottom: -$header-height;
   overflow: hidden;
-  height: auto;
+  height: 820px;
   @include media-breakpoint-down(sm) {
     height: calc(100vh - 60px);
     margin-bottom: -$header-height-sm;
