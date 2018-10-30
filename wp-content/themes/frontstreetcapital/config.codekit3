@@ -8567,6 +8567,28 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/assets/img/tarkio-mark-dark.png": {
+		"ft": 32768,
+		"iS": 10823,
+		"oA": 0,
+		"oAP": "/assets/img/tarkio-mark-dark.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/assets/img/tarkio-mark-white.png": {
+		"ft": 32768,
+		"iS": 8568,
+		"oA": 0,
+		"oAP": "/assets/img/tarkio-mark-white.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/assets/img/tarkio-section-bg.jpg": {
 		"ft": 16384,
 		"iS": 450798,

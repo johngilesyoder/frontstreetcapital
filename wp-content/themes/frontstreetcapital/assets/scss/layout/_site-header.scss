@@ -32,12 +32,13 @@
     display: flex;
     align-items: center;
   }
-  .nav-quick-access {
+  .nav-quick-access,
+  .nav-properties {
     a,
     button {
-      margin-right: 40px;
-      @include media-breakpoint-down(md) {
-        margin-right: 20px;
+      margin-right: 30px;
+      @include media-breakpoint-down(lg) {
+        margin-right: 30px;
       }
       @include media-breakpoint-down(sm) {
         display: none;
@@ -48,14 +49,31 @@
         margin-right: 40px;
       }
     }
-    a {
+    a,
+    .btn-account-access {
       font-family: $font-family-sans-serif;
       color: $gray-dark;
       font-weight: 500;
       font-size: $font-size-15;
+      background: transparent;
+      border: 0;
+      padding: 0;
       &:hover {
         color: darken($gray-dark, 15%);
+        text-decoration: underline;
       }
+    }
+  }
+  .nav-properties {
+    border-right: 1px solid $gray-dark;
+    margin-right: 30px;
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+    .tarkio-logo {
+      height: 21px;
+      margin-right: 8px;
+      transform: translateY(-2px);
     }
   }
   .btn-menu {
@@ -78,16 +96,21 @@
   left: 0;
   right: 0;
   width: 100%;
-  @include gradient-y($start-color: rgba(#07090A, .18), $end-color: rgba(#07090A, 0), $start-percent: 0%, $end-percent: 100%);
+  @include gradient-y($start-color: rgba(#07090A, .35), $end-color: rgba(#07090A, 0), $start-percent: 0%, $end-percent: 100%);
   @include media-breakpoint-down(sm) {
     background: rgba($gray-dark, .93);
     backdrop-filter: blur(0);
     position: fixed;
     border: 0;
   }
-  .nav-quick-access {
-    a {
+  .nav-quick-access,
+  .nav-properties {
+    a,
+    .btn-account-access {
       color: $white;
     }
+  }
+  .nav-properties {
+    border-right: 1px solid $white;
   }
 }
